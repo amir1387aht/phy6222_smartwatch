@@ -11,6 +11,7 @@
 #include "rf_phy_driver.h"
 #include "flash.h"
 #include "display/display.h"
+#include "display/gfx.h"
 
 extern void init_config(void);
 extern void app_osal_init(void);
@@ -165,7 +166,7 @@ int main(void)
 #endif
 
     device_init();
-    display_init();
+    gfx_init(ST7735_TFTWIDTH_128, ST7735_TFTHEIGHT_128, 0);
     app_osal_init();
 
     return 0;

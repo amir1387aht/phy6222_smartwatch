@@ -27,4 +27,4 @@ build/source/main.o: source/main.c source/config.h \
  sdk/components/ble/controller/ll_hw_drv.h \
  sdk/components/ble/controller/rf_phy_driver.h \
  sdk/components/inc/version.h sdk/components/driver/flash/flash.h \
- source/display/display.h
+ source/display/display.h source/display/gfx.h source/display/display.h

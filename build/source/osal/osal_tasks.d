@@ -15,6 +15,6 @@ build/source/osal/osal_tasks.o: source/osal/osal_tasks.c \
  sdk/components/inc/error.h sdk/components/driver/clock/clock.h \
  sdk/components/driver/timer/timer.h \
  sdk/components/ble/controller/ll_def.h \
- sdk/components/ble/controller/ll_buf.h source/app/app.h \
- source/utils/utils.h source/config.h source/display/display.h \
- sdk/components/inc/mcu.h
+ sdk/components/ble/controller/ll_buf.h source/app/app.h source/config.h \
+ source/utils/utils.h source/display/display.h sdk/components/inc/mcu.h \
+ source/display/gfx.h source/fonts/FreeMono9pt7b.h
