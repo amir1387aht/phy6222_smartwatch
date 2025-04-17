@@ -3,7 +3,7 @@ PROJECT_NAME ?= phy6222_watch
 PROJECT_DEFS ?= -DDEVICE=DEVICE_WATCH_1
 BLE ?= 1
 ##############################################################################
-COM_PORT = COM19
+COM_PORT = COM7
 COM_SPEED = 115200
 UART_LOG_BPS = 115200
 
