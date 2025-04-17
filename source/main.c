@@ -1,3 +1,5 @@
+// main.c - By Another
+
 #include "config.h"
 #include "gpio.h"
 #include "clock.h"
