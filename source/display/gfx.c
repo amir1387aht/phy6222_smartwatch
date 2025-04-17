@@ -1,4 +1,4 @@
-// gfx.c - By Amir1387aht(@Do3p3iri)
+// gfx.c - By Another(@Do3p3iri)
 
 #include "display/gfx.h"
 #include <string.h>
