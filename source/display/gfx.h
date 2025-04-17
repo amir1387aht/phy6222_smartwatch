@@ -1,4 +1,3 @@
-// gfx.h - By Another(@Do3p3iri)
 #ifndef GFX_H
 #define GFX_H
 
