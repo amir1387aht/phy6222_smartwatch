@@ -1,5 +1,3 @@
-// gfx.c - By Another(@Do3p3iri)
-
 #include "display/gfx.h"
 #include <string.h>
 
