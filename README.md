@@ -7,6 +7,6 @@
  3. You should connect gnd, tx, rx and reset pins to uart converter
 
 <b>Connection Images:</b>
- [TX & GND PIN](screenshots/ss_1.jpg) - 
- [RX PIN](screenshots/ss_2.jpg) - 
- [RESET PIN](screenshots/ss_33.jpg)
+ <img src="screenshots/ss_1.jpg" alt="TX & GND PIN" width="300"/>
+ <img src="screenshots/ss_2.jpg" alt="RX PIN" width="300"/>
+ <img src="screenshots/ss_33.jpg" alt="RESET PIN" width="300"/>
