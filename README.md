@@ -8,5 +8,5 @@
 
 <b>Connections:</b>
  [TX & GND PIN](screenshots/ss_1.jpg)
- [RX PIN](screenshots/ss_2.jpg)
- [RESET PIN](screenshots/ss_3.jpg)
+ [ - RX PIN](screenshots/ss_2.jpg)
+ [ - RESET PIN](screenshots/ss_3.jpg)
