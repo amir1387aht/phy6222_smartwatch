@@ -304,3 +304,13 @@ void display_init(uint16_t width, uint16_t height, uint8_t _rotation) {
     hal_gpio_pin_init(BKL_PIN, GPIO_OUTPUT);
     hal_gpio_write(BKL_PIN, 0); // Depending on your hardware, 0 may be on
 }
+
+void backlight_turn_off()
+{
+    hal_gpio_write(BKL_PIN, 1);
+}
+
+void backlight_turn_on()
+{
+    hal_gpio_write(BKL_PIN, 0);
+}

@@ -72,5 +72,7 @@ void display_fill_screen(uint16_t color);
 void display_set_rotation(uint8_t m);
 uint16_t display_color(uint8_t r, uint8_t g, uint8_t b);
 void display_draw_pixel(uint16_t x, uint16_t y, uint16_t color);
+void backlight_turn_off();
+void backlight_turn_on();
 
 #endif // DISPLAY_H
