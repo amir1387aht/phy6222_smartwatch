@@ -302,7 +302,7 @@ void display_init(uint16_t width, uint16_t height, uint8_t _rotation) {
 
     // Backlight control initialization
     hal_gpio_pin_init(BKL_PIN, GPIO_OUTPUT);
-    hal_gpio_write(BKL_PIN, 0); // Depending on your hardware, 0 may be on
+    backlight_turn_on();
 }
 
 void backlight_turn_off()
