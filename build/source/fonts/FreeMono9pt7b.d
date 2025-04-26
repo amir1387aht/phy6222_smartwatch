@@ -8,4 +8,7 @@ build/source/fonts/FreeMono9pt7b.o: source/fonts/FreeMono9pt7b.c \
  sdk/misc/CMSIS/include/core_cm0.h sdk/misc/CMSIS/include/core_cmInstr.h \
  sdk/misc/CMSIS/include/core_cmFunc.h sdk/components/inc/mcu_phy_bumbee.h \
  sdk/components/inc/error.h sdk/components/driver/clock/clock.h \
- source/config.h sdk/components/inc/mcu.h
+ source/config.h sdk/components/inc/mcu.h \
+ sdk/components/osal/include/osal.h sdk/components/osal/include/comdef.h \
+ sdk/components/osal/include/OSAL_Memory.h \
+ sdk/components/osal/include/OSAL_Timers.h

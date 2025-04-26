@@ -8,4 +8,6 @@ build/source/app/app.o: source/app/app.c source/app/app.h \
  sdk/components/inc/error.h sdk/components/driver/clock/clock.h \
  source/config.h source/utils/utils.h source/display/display.h \
  sdk/components/inc/mcu.h source/display/gfx.h \
- source/fonts/FreeMono9pt7b.h
+ sdk/components/osal/include/osal.h sdk/components/osal/include/comdef.h \
+ sdk/components/osal/include/OSAL_Memory.h \
+ sdk/components/osal/include/OSAL_Timers.h source/fonts/FreeMono9pt7b.h

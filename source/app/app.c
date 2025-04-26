@@ -5,13 +5,11 @@
 #define PADDLE_HEIGHT   20
 #define PLAYER_PADDLE_X 2
 #define AI_PADDLE_X     (ST7735_TFTWIDTH_128 - PADDLE_WIDTH - 2)
-#define BALL_COLOR      0xF800
-#define BALL_FLASH_COLOR 0x07E0
-#define PADDLE_COLOR    0x07E0
-#define BG_COLOR        0x0000
-#define TEXT_COLOR      0xFFFF
-
-// Top boundary
+#define BALL_COLOR      ST77XX_BLUE // or display_get_color(0, 0, 255)
+#define BALL_FLASH_COLOR ST77XX_RED // or display_get_color(255, 0, 0)
+#define PADDLE_COLOR    ST77XX_RED
+#define BG_COLOR        ST77XX_BLACK
+#define TEXT_COLOR      ST77XX_WHITE
 #define TOP_BOUNDARY    11
 
 static int ball_x = ST7735_TFTWIDTH_128 / 2;

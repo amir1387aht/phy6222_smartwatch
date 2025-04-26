@@ -2,6 +2,8 @@
 #define GFX_H
 
 #include "display/display.h"
+#include <stdlib.h>
+#include "osal.h"
 
 // First, the GFXglyph structure should be defined to match your font data:
 typedef struct {

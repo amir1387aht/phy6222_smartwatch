@@ -37,7 +37,7 @@
 #define ST77XX_MADCTL_MX  0x40  // Row address order
 #define ST77XX_MADCTL_MY  0x80  // Column address order
 #define ST77XX_MADCTL_MV  0x20  // Row/Column exchange
-#define ST77XX_MADCTL_RGB 0x00  // RGB order
+#define ST7735_MADCTL_RGB 0x00  // RGB order
 #define ST7735_MADCTL_BGR 0x08  // BGR order
 
 // Display size definitions
@@ -57,20 +57,16 @@
 
 #define ST77XX_BLACK 0x0000
 #define ST77XX_WHITE 0xFFFF
-#define ST77XX_RED 0xF800
-#define ST77XX_GREEN 0x07E0
-#define ST77XX_BLUE 0x001F
-#define ST77XX_CYAN 0x07FF
-#define ST77XX_MAGENTA 0xF81F
-#define ST77XX_YELLOW 0xFFE0
-#define ST77XX_ORANGE 0xFC00
+#define ST77XX_RED 0x07E0
+#define ST77XX_GREEN 0x001F
+#define ST77XX_BLUE 0xF800
 
 void display_init(uint16_t width, uint16_t height, uint8_t _rotation);
 void display_fill_window(uint8_t x0, uint8_t y0, uint8_t x1, uint8_t y1, uint16_t* color_buffer, uint32_t size);
 void display_set_addr_window(uint8_t x0, uint8_t y0, uint8_t x1, uint8_t y1);
 void display_fill_screen(uint16_t color);
 void display_set_rotation(uint8_t m);
-uint16_t display_color(uint8_t r, uint8_t g, uint8_t b);
+uint16_t display_get_color(uint8_t r, uint8_t g, uint8_t b);
 void display_draw_pixel(uint16_t x, uint16_t y, uint16_t color);
 void backlight_turn_off();
 void backlight_turn_on();

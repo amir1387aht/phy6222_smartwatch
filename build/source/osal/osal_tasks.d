@@ -17,4 +17,5 @@ build/source/osal/osal_tasks.o: source/osal/osal_tasks.c \
  sdk/components/ble/controller/ll_def.h \
  sdk/components/ble/controller/ll_buf.h source/app/app.h source/config.h \
  source/utils/utils.h source/display/display.h sdk/components/inc/mcu.h \
- source/display/gfx.h source/fonts/FreeMono9pt7b.h
+ source/display/gfx.h sdk/components/osal/include/osal.h \
+ source/fonts/FreeMono9pt7b.h

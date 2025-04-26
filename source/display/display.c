@@ -223,12 +223,9 @@ void display_fill_screen(uint16_t color) {
     static uint16_t buffer[ST7735_TFTWIDTH_128 * BUFFER_ROWS];
     uint16_t i, rows_remaining = _height;
     
-    // Convert color to the proper format (swap bytes if necessary)
-    uint16_t swapped_color = ((color & 0xFF) << 8) | ((color >> 8) & 0xFF);
-    
     // Fill buffer with the desired color
     for (i = 0; i < ST7735_TFTWIDTH_128 * BUFFER_ROWS; i++) {
-        buffer[i] = swapped_color;
+        buffer[i] = color;
     }
     
     display_set_addr_window(0, 0, _width - 1, _height - 1);
@@ -241,9 +238,15 @@ void display_fill_screen(uint16_t color) {
     }
 }
 
-uint16_t display_color(uint8_t r, uint8_t g, uint8_t b) {
-    // Convert to RGB565 format: 5 bits for R, 6 for G, 5 for B
-    return ((r & 0xF8) << 8) | ((g & 0xFC) << 3) | (b >> 3);
+uint16_t display_get_color(uint8_t r, uint8_t g, uint8_t b) {
+    // Convert to RGB565 format using swapped channel mappings to match custom defines:
+    // ST77XX_RED  = 0x07E0 (green bits),
+    // ST77XX_GREEN= 0x001F (blue bits),
+    // ST77XX_BLUE = 0xF800 (red bits)
+    // So map R→green field, G→blue field, B→red field:
+    return ((b & 0xF8) << 8)   // B into bits 15:11
+         | ((r & 0xFC) << 3)   // R into bits 5:0
+         | ( (g & 0xF8) >> 3); // G into bits 4:0
 }
 
 void display_draw_pixel(uint16_t x, uint16_t y, uint16_t color) {
