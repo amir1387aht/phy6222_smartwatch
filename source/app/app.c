@@ -149,6 +149,7 @@ void posedge_callback_wakeup(GPIO_Pin_e pin, IO_Wakeup_Pol_e type) {
 
 void app_init() {
     hal_gpioin_register(GPIO_P11, posedge_callback_wakeup, NULL);
+    gfx_init(ST7735_TFTWIDTH_128, ST7735_TFTHEIGHT_128, 0);
     gfx_set_font(&FreeMono9pt7b);
     gfx_set_text_color(TEXT_COLOR);
     gfx_set_text_size(1);

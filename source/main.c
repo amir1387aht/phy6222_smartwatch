@@ -168,7 +168,6 @@ int main(void)
 #endif
 
     device_init();
-    gfx_init(ST7735_TFTWIDTH_128, ST7735_TFTHEIGHT_128, 0);
     app_osal_init();
 
     return 0;
