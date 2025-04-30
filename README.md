@@ -1,5 +1,6 @@
 # 🕹️ phy6222_smartwatch  
 Reverse engineering and hacking a cheap smartwatch with the PHY6222 MCU.
+
 You can show bitmaps using `https://notisrac.github.io/FileToCArray/` tool with `16bit RRRRRGGGGGGBBBBB (2byte/pixel)` color order
 
 ---
