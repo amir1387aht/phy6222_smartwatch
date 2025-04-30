@@ -12,3 +12,6 @@
 
 #define SCLK_PIN GPIO_P34
 #define MOSI_PIN GPIO_P32
+
+// Button
+#define BUTTON_PIN GPIO_P11
