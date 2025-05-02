@@ -3,7 +3,7 @@ Reverse engineering and hacking a cheap smartwatch with the PHY6222 MCU.
 
 <b>For bitmaps: </b>You can show bitmaps using `gfx_draw_rgb_bitmap` function and for generating bitmaps you can use `https://notisrac.github.io/FileToCArray/` tool with `16bit RRRRRGGGGGGBBBBB (2byte/pixel)` color order
 
-<b>Youtube Video: </b>You can watch the demo at this video https://youtu.be/wq2xSRMypCg?si=J9CA8hQtWVOK-v0q
+<b>Youtube Video: </b>You can watch the demo at this link :  https://youtu.be/wq2xSRMypCg?si=J9CA8hQtWVOK-v0q
 
 ---
 
