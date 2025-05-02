@@ -11,7 +11,7 @@ Reverse engineering and hacking a cheap smartwatch with the PHY6222 MCU.
 
 1. Connect the **GND**, **TX**, **RX**, and **RESET** pins to a UART converter.
 2. Change `COM_PORT` with your own port in Makfile file setting and run `make` in the root directory.
-3 The code will compile, flash the device, and launch a simple log terminal.  
+3. The code will compile, flash the device, and launch a simple log terminal.  
 
 ---
 
