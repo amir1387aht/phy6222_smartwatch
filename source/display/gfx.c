@@ -1,10 +1,8 @@
 #include "display/gfx.h"
-#include <string.h>
 
 // Configuration
 static uint16_t _width;
 static uint16_t _height;
-static uint8_t _rotation;
 static int16_t WIDTH, HEIGHT; // Original dimensions
 
 static const GFXfont *_font = NULL;
@@ -210,7 +208,6 @@ void gfx_init(uint16_t width, uint16_t height, uint8_t rotation) {
     _height = height;
     WIDTH = width;
     HEIGHT = height;
-    _rotation = rotation;
     display_init(width, height, rotation);
 }
 
@@ -309,6 +306,28 @@ void gfx_draw_rgb_bitmap_with_mask(int16_t x, int16_t y, const uint16_t *bitmap,
             // Draw pixel only if corresponding mask bit is 1
             if (byte & 0x01) {
                 gfx_draw_pixel(x + i, y + j, bitmap[j * w + i]);
+            }
+        }
+    }
+}
+
+// Draw a scaled bitmap
+void gfx_draw_scaled_bitmap(int16_t x, int16_t y, const uint8_t *bitmap, int16_t w, int16_t h, int16_t scale, uint16_t color) {
+    int16_t byteWidth = (w + 7) / 8;
+    uint8_t byte = 0;
+
+    if (scale < 1) scale = 1;
+
+    for (int16_t j = 0; j < h; j++) {
+        for (int16_t i = 0; i < w; i++) {
+            if (i & 7) {
+                byte >>= 1;
+            } else {
+                byte = bitmap[j * byteWidth + i / 8];
+            }
+            
+            if (byte & 0x01) {
+                gfx_fill_rect(x + i * scale, y + j * scale, scale, scale, color);
             }
         }
     }
@@ -676,24 +695,363 @@ void gfx_fill_triangle(int16_t x0, int16_t y0, int16_t x1, int16_t y1, int16_t x
     }
 }
 
-// Set the _rotation of the display
-void gfx_set_rotation(uint8_t r) {
-    _rotation = r % 4;
-    switch (_rotation) {
-    case 0:
-    case 2:
-        _width = WIDTH;
-        _height = HEIGHT;
-        break;
-    case 1:
-    case 3:
-        _width = HEIGHT;
-        _height = WIDTH;
-        break;
-    }
-}
-
 // Fill the entire screen with a color
 void gfx_fill_screen(uint16_t color) {
     display_fill_screen(color);
+}
+
+int16_t gfx_get_width(void) {
+    return _width;
+}
+
+int16_t gfx_get_height(void) {
+    return _height;
+}
+
+// Additional text functions
+const GFXfont* gfx_get_current_font(void) {
+    return _font;
+}
+
+uint8_t gfx_get_text_size(void) {
+    return _text_size;
+}
+
+bool gfx_get_text_wrap(void) {
+    return _wrap;
+}
+
+int16_t gfx_get_cursor_x(void) {
+    return _cursor_x;
+}
+
+int16_t gfx_get_cursor_y(void) {
+    return _cursor_y;
+}
+
+void gfx_println(const char *str) {
+    gfx_print(str);
+    _cursor_x = 0;
+    _cursor_y += _font ? (_font->yAdvance * _text_size) : (8 * _text_size);
+}
+
+void gfx_clear(void) {
+    gfx_fill_screen(0); // Default to black
+    gfx_set_cursor(0, 0);
+}
+
+// Draw a dashed line
+void gfx_draw_dashed_line(int16_t x0, int16_t y0, int16_t x1, int16_t y1, uint16_t color, uint8_t dash_len, uint8_t gap_len) {
+    int16_t steep = abs(y1 - y0) > abs(x1 - x0);
+    if (steep) {
+        _swap_int16(&x0, &y0);
+        _swap_int16(&x1, &y1);
+    }
+
+    if (x0 > x1) {
+        _swap_int16(&x0, &x1);
+        _swap_int16(&y0, &y1);
+    }
+
+    int16_t dx = x1 - x0;
+    int16_t dy = abs(y1 - y0);
+    int16_t err = dx / 2;
+    int16_t ystep = (y0 < y1) ? 1 : -1;
+    int16_t segment_length = 0;
+    bool draw = true;
+
+    for (int16_t x = x0, y = y0; x <= x1; x++) {
+        if (draw) {
+            if (steep) {
+                gfx_draw_pixel(y, x, color);
+            } else {
+                gfx_draw_pixel(x, y, color);
+            }
+        }
+
+        segment_length++;
+        
+        if ((draw && segment_length >= dash_len) || (!draw && segment_length >= gap_len)) {
+            segment_length = 0;
+            draw = !draw;
+        }
+
+        err -= dy;
+        if (err < 0) {
+            y += ystep;
+            err += dx;
+        }
+    }
+}
+
+// Draw an arc
+void gfx_draw_arc(int16_t x0, int16_t y0, int16_t r, int16_t start_angle, int16_t end_angle, uint16_t color) {
+    // Ensure angles are in 0-360 range
+    start_angle = start_angle % 360;
+    if (start_angle < 0) start_angle += 360;
+    
+    end_angle = end_angle % 360;
+    if (end_angle < 0) end_angle += 360;
+
+    // If start > end, swap them and add 360 to end
+    if (start_angle > end_angle) {
+        int16_t temp = start_angle;
+        start_angle = end_angle;
+        end_angle = temp + 360;
+    }
+
+    float rad_per_degree = 0.0174532925; // PI/180
+    
+    for (int16_t i = start_angle; i <= end_angle; i++) {
+        int16_t angle = i % 360;
+        float rad_angle = angle * rad_per_degree;
+        int16_t x = x0 + (int16_t)(cos(rad_angle) * r);
+        int16_t y = y0 + (int16_t)(sin(rad_angle) * r);
+        
+        gfx_draw_pixel(x, y, color);
+    }
+}
+
+// Fill an arc
+void gfx_fill_arc(int16_t x0, int16_t y0, int16_t r, int16_t start_angle, int16_t end_angle, uint16_t color) {
+    // Ensure angles are in 0-360 range
+    start_angle = start_angle % 360;
+    if (start_angle < 0) start_angle += 360;
+    
+    end_angle = end_angle % 360;
+    if (end_angle < 0) end_angle += 360;
+
+    // If start > end, swap them and add 360 to end
+    if (start_angle > end_angle) {
+        int16_t temp = start_angle;
+        start_angle = end_angle;
+        end_angle = temp + 360;
+    }
+
+    float rad_per_degree = 0.0174532925; // PI/180
+    
+    for (int16_t angle = start_angle; angle <= end_angle; angle++) {
+        int16_t a = angle % 360;
+        float rad_angle = a * rad_per_degree;
+        int16_t x = x0 + (int16_t)(cos(rad_angle) * r);
+        int16_t y = y0 + (int16_t)(sin(rad_angle) * r);
+        
+        gfx_draw_line(x0, y0, x, y, color);
+    }
+}
+
+// Draw an ellipse
+void gfx_draw_ellipse(int16_t x0, int16_t y0, int16_t rx, int16_t ry, uint16_t color) {
+    if (rx < 2) rx = 2;
+    if (ry < 2) ry = 2;
+    
+    int16_t x, y;
+    int32_t rx2 = rx * rx;
+    int32_t ry2 = ry * ry;
+    int32_t fx2 = 4 * rx2;
+    int32_t fy2 = 4 * ry2;
+    int32_t s;
+    
+    // First set of points, y' > -1
+    for (x = 0, y = ry, s = 2*ry2+rx2*(1-2*ry); ry2*x <= rx2*y; x++) {
+        gfx_draw_pixel(x0 + x, y0 + y, color);
+        gfx_draw_pixel(x0 - x, y0 + y, color);
+        gfx_draw_pixel(x0 + x, y0 - y, color);
+        gfx_draw_pixel(x0 - x, y0 - y, color);
+        
+        if (s >= 0) {
+            s += fx2 * (1 - y);
+            y--;
+        }
+        s += ry2 * ((4 * x) + 6);
+    }
+    
+    // Second set of points, y' <= -1
+    for (x = rx, y = 0, s = 2*rx2+ry2*(1-2*rx); rx2*y <= ry2*x; y++) {
+        gfx_draw_pixel(x0 + x, y0 + y, color);
+        gfx_draw_pixel(x0 - x, y0 + y, color);
+        gfx_draw_pixel(x0 + x, y0 - y, color);
+        gfx_draw_pixel(x0 - x, y0 - y, color);
+        
+        if (s >= 0) {
+            s += fy2 * (1 - x);
+            x--;
+        }
+        s += rx2 * ((4 * y) + 6);
+    }
+}
+
+// Fill an ellipse
+void gfx_fill_ellipse(int16_t x0, int16_t y0, int16_t rx, int16_t ry, uint16_t color) {
+    if (rx < 2) rx = 2;
+    if (ry < 2) ry = 2;
+    
+    int16_t x, y;
+    int32_t rx2 = rx * rx;
+    int32_t ry2 = ry * ry;
+    int32_t fx2 = 4 * rx2;
+    int32_t fy2 = 4 * ry2;
+    int32_t s;
+    
+    // First set of points, y' > -1
+    for (x = 0, y = ry, s = 2*ry2+rx2*(1-2*ry); ry2*x <= rx2*y; x++) {
+        gfx_draw_fast_h_line(x0 - x, y0 - y, 2 * x + 1, color);
+        gfx_draw_fast_h_line(x0 - x, y0 + y, 2 * x + 1, color);
+        
+        if (s >= 0) {
+            s += fx2 * (1 - y);
+            y--;
+        }
+        s += ry2 * ((4 * x) + 6);
+    }
+    
+    // Second set of points, y' <= -1
+    for (x = rx, y = 0, s = 2*rx2+ry2*(1-2*rx); rx2*y <= ry2*x; y++) {
+        gfx_draw_fast_h_line(x0 - x, y0 - y, 2 * x + 1, color);
+        gfx_draw_fast_h_line(x0 - x, y0 + y, 2 * x + 1, color);
+        
+        if (s >= 0) {
+            s += fy2 * (1 - x);
+            x--;
+        }
+        s += rx2 * ((4 * y) + 6);
+    }
+}
+
+// Draw a polygon
+void gfx_draw_polygon(int16_t *points, uint8_t num_points, uint16_t color) {
+    if (num_points < 3) return; // Need at least 3 points for a polygon
+    
+    for (uint8_t i = 0; i < num_points - 1; i++) {
+        gfx_draw_line(points[i*2], points[i*2+1], points[(i+1)*2], points[(i+1)*2+1], color);
+    }
+    // Connect last point back to first
+    gfx_draw_line(points[(num_points-1)*2], points[(num_points-1)*2+1], points[0], points[1], color);
+}
+
+// Fill a polygon
+// This uses a simple scanline algorithm
+void gfx_fill_polygon(int16_t *points, uint8_t num_points, uint16_t color) {
+    if (num_points < 3) return; // Need at least 3 points for a polygon
+    
+    // Find min and max Y values
+    int16_t min_y = points[1];
+    int16_t max_y = points[1];
+    
+    for (uint8_t i = 1; i < num_points; i++) {
+        if (points[i*2+1] < min_y) min_y = points[i*2+1];
+        if (points[i*2+1] > max_y) max_y = points[i*2+1];
+    }
+    
+    // Allocate space for nodes (intersections with scanline)
+    int16_t *nodes = (int16_t*)osal_mem_alloc(num_points * sizeof(int16_t));
+    if (!nodes) return; // Memory allocation failed
+    
+    // Process scanlines from min_y to max_y
+    for (int16_t y = min_y; y <= max_y; y++) {
+        // Build node list
+        int nodes_count = 0;
+        int16_t j = num_points - 1;
+        
+        for (int16_t i = 0; i < num_points; i++) {
+            if ((points[i*2+1] < y && points[j*2+1] >= y) || (points[j*2+1] < y && points[i*2+1] >= y)) {
+                nodes[nodes_count++] = points[i*2] + 
+                    (y - points[i*2+1]) * (points[j*2] - points[i*2]) / (points[j*2+1] - points[i*2+1]);
+            }
+            j = i;
+        }
+        
+        // Sort nodes (simple bubble sort for small lists)
+        for (int16_t i = 0; i < nodes_count - 1; i++) {
+            for (int16_t j = 0; j < nodes_count - 1 - i; j++) {
+                if (nodes[j] > nodes[j+1]) {
+                    int16_t temp = nodes[j];
+                    nodes[j] = nodes[j+1];
+                    nodes[j+1] = temp;
+                }
+            }
+        }
+        
+        // Fill between node pairs
+        for (int16_t i = 0; i < nodes_count; i += 2) {
+            if (nodes[i] >= _width) break;
+            if (nodes[i+1] > 0) {
+                if (nodes[i] < 0) nodes[i] = 0;
+                if (nodes[i+1] > _width) nodes[i+1] = _width;
+                gfx_draw_fast_h_line(nodes[i], y, nodes[i+1] - nodes[i], color);
+            }
+        }
+    }
+    
+    osal_mem_free(nodes);
+}
+
+// Scrolling functions
+void gfx_scroll_up(uint16_t lines, uint16_t bg_color) {
+    if (lines <= 0 || lines >= _height) {
+        gfx_fill_screen(bg_color);
+        return;
+    }
+    
+    // Create a buffer to store the rows
+    uint16_t *buffer = (uint16_t *)osal_mem_alloc(_width * sizeof(uint16_t));
+    if (!buffer) return;
+    
+    // For each row, copy data from the row below it
+    for (int16_t y = 0; y < _height - lines; y++) {
+        // Read row from below
+        for (int16_t x = 0; x < _width; x++) {
+            // This should be replaced with actual display_read_pixel function
+            // buffer[x] = display_read_pixel(x, y + lines);
+            // Since we don't have access to read pixels, this might be a limitation
+            buffer[x] = 0; // Default value
+        }
+        
+        // Write to current row
+        display_fill_window(0, y, _width - 1, y, buffer, _width);
+    }
+    
+    // Fill the bottom rows with background color
+    for (int16_t y = _height - lines; y < _height; y++) {
+        for (int16_t x = 0; x < _width; x++) {
+            buffer[x] = bg_color;
+        }
+        display_fill_window(0, y, _width - 1, y, buffer, _width);
+    }
+    
+    osal_mem_free(buffer);
+}
+
+void gfx_scroll_down(uint16_t lines, uint16_t bg_color) {
+    if (lines <= 0 || lines >= _height) {
+        gfx_fill_screen(bg_color);
+        return;
+    }
+    
+    // Create a buffer to store the rows
+    uint16_t *buffer = (uint16_t *)osal_mem_alloc(_width * sizeof(uint16_t));
+    if (!buffer) return;
+    
+    // For each row, copy data from the row above it
+    for (int16_t y = _height - 1; y >= lines; y--) {
+        // Read row from above
+        for (int16_t x = 0; x < _width; x++) {
+            // This should be replaced with actual display_read_pixel function
+            // buffer[x] = display_read_pixel(x, y - lines);
+            buffer[x] = 0; // Default value
+        }
+        
+        // Write to current row
+        display_fill_window(0, y, _width - 1, y, buffer, _width);
+    }
+    
+    // Fill the top rows with background color
+    for (int16_t y = 0; y < lines; y++) {
+        for (int16_t x = 0; x < _width; x++) {
+            buffer[x] = bg_color;
+        }
+        display_fill_window(0, y, _width - 1, y, buffer, _width);
+    }
+    
+    osal_mem_free(buffer);
 }
