@@ -7650,6 +7650,7 @@ LOAD ./build/./sdk/misc/CMSIS/device/phyplus/phy6222_vectors.o
 LOAD ./build/./sdk/misc/CMSIS/device/phyplus/phy6222_start.o
 START GROUP
 LOAD C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.3 rel1/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp\libgcc.a
+LOAD C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.3 rel1/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp\libm.a
 LOAD C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.3 rel1/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp\libnosys.a
 END GROUP
 OUTPUT(./build/phy6222_watch.elf elf32-littlearm)

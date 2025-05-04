@@ -147,7 +147,7 @@ LDFLAGS    += -Wl,--script=$(LDSCRIPT)
 # LDFLAGS    += -Wl,--no-warn-rwx-segments
 LDFLAGS    += -Wl,--just-symbols=$(SDK_PATH)/misc/bb_rom_sym_m0.gcc
 LDFLAGS    += -Wl,-Map=$(OBJ_DIR)/$(PROJECT_NAME).map 
-LIBS       += -Wl,--start-group -lgcc -lnosys -Wl,--end-group
+LIBS       += -Wl,--start-group -lgcc -lm -lnosys -Wl,--end-group
 
 ##############################################################################
 INCLUDES += -I$(SDK_PATH)/misc
