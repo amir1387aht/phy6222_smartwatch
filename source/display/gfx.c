@@ -45,7 +45,21 @@ void gfx_set_text_wrap(bool w) {
 void gfx_set_cursor(int16_t x, int16_t y) {
     _cursor_x = x;
     _cursor_y = y + _font->yAdvance * _text_size;
+}
 
+void gfx_draw_text(int16_t x, int16_t y, const char *str, uint16_t color) {
+    uint16_t orig_color = _text_color;
+    int16_t orig_x = _cursor_x;
+    int16_t orig_y = _cursor_y;
+    
+    _text_color = color;
+    gfx_set_cursor(x, y);
+    gfx_print(str);
+    
+    // Restore original state
+    _text_color = orig_color;
+    _cursor_x = orig_x;
+    _cursor_y = orig_y;
 }
 
 // Draw a single character
@@ -78,23 +92,62 @@ int16_t gfx_draw_char(int16_t x, int16_t y, unsigned char c, uint16_t color, uin
         yo16 *= size;
     }
     
+    // Calculate actual pixel positions
+    int16_t x_pixel, y_pixel;
+    
     // Draw character
     for (yy = 0; yy < h; yy++) {
         for (xx = 0; xx < w; xx++) {
             if (!(bit++ & 7)) {
                 bits = bitmap[bo++];
             }
+            
+            // Calculate actual pixel position with scaling
+            x_pixel = x + xo16 + (xx * size);
+            y_pixel = y + yo16 + (yy * size);
+            
+            // Only draw if pixel is within display bounds
             if (bits & 0x80) {
                 if (size == 1) {
-                    gfx_draw_pixel(x + xo16 + xx, y + yo16 + yy, color);
+                    if (x_pixel >= 0 && y_pixel >= 0 && x_pixel < _width && y_pixel < _height) {
+                        gfx_draw_pixel(x_pixel, y_pixel, color);
+                    }
                 } else {
-                    gfx_fill_rect(x + (xo16 + xx) * size, y + (yo16 + yy) * size, size, size, color);
+                    // For scaled text, check boundaries for the entire scaled pixel
+                    if (x_pixel >= 0 && y_pixel >= 0 && x_pixel + size - 1 < _width && y_pixel + size - 1 < _height) {
+                        gfx_fill_rect(x_pixel, y_pixel, size, size, color);
+                    } else {
+                        // Partial drawing for pixels at the edge of the display
+                        for (uint8_t sx = 0; sx < size; sx++) {
+                            for (uint8_t sy = 0; sy < size; sy++) {
+                                if ((x_pixel + sx) >= 0 && (y_pixel + sy) >= 0 && 
+                                    (x_pixel + sx) < _width && (y_pixel + sy) < _height) {
+                                    gfx_draw_pixel(x_pixel + sx, y_pixel + sy, color);
+                                }
+                            }
+                        }
+                    }
                 }
             } else if (bg != color) {
                 if (size == 1) {
-                    gfx_draw_pixel(x + xo16 + xx, y + yo16 + yy, bg);
+                    if (x_pixel >= 0 && y_pixel >= 0 && x_pixel < _width && y_pixel < _height) {
+                        gfx_draw_pixel(x_pixel, y_pixel, bg);
+                    }
                 } else {
-                    gfx_fill_rect(x + (xo16 + xx) * size, y + (yo16 + yy) * size, size, size, bg);
+                    // For scaled text, check boundaries for the entire scaled pixel
+                    if (x_pixel >= 0 && y_pixel >= 0 && x_pixel + size - 1 < _width && y_pixel + size - 1 < _height) {
+                        gfx_fill_rect(x_pixel, y_pixel, size, size, bg);
+                    } else {
+                        // Partial drawing for pixels at the edge of the display
+                        for (uint8_t sx = 0; sx < size; sx++) {
+                            for (uint8_t sy = 0; sy < size; sy++) {
+                                if ((x_pixel + sx) >= 0 && (y_pixel + sy) >= 0 && 
+                                    (x_pixel + sx) < _width && (y_pixel + sy) < _height) {
+                                    gfx_draw_pixel(x_pixel + sx, y_pixel + sy, bg);
+                                }
+                            }
+                        }
+                    }
                 }
             }
             bits <<= 1;
@@ -165,12 +218,11 @@ void gfx_get_text_bounds(const char *str, int16_t x, int16_t y, int16_t *x1, int
 // Write a single character at the current cursor position
 void gfx_write_char(char c) {
     if (!_font) {
-        // Handle case for built-in font (not implemented here)
         return;
     }
     
     if (c == '\n') {
-        // Handle newline
+        // Handle newline - move down by the correct amount based on font size
         _cursor_y += _font->yAdvance * _text_size;
         _cursor_x = 0;
     } else if (c == '\r') {
@@ -182,26 +234,11 @@ void gfx_write_char(char c) {
         _cursor_x += xAdvance;
         
         // Handle text wrapping
-        if (_wrap && (_cursor_x > _width - (_font->yAdvance * _text_size))) {
+        if (_wrap && (_cursor_x > (_width - (_font->yAdvance * _text_size)))) {
             _cursor_y += _font->yAdvance * _text_size;
             _cursor_x = 0;
         }
     }
-}
-
-void gfx_draw_text(int16_t x, int16_t y, const char *str, uint16_t color) {
-    uint16_t orig_color = _text_color;
-    int16_t orig_x = _cursor_x;
-    int16_t orig_y = _cursor_y;
-    
-    _text_color = color;
-    gfx_set_cursor(x, y);
-    gfx_print(str);
-    
-    // Restore original state
-    _text_color = orig_color;
-    _cursor_x = orig_x;
-    _cursor_y = orig_y;
 }
 
 // Print a string of text
