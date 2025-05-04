@@ -98,6 +98,7 @@ int16_t gfx_get_cursor_y(void);
 void gfx_get_text_bounds(const char *str, int16_t x, int16_t y, int16_t *x1, int16_t *y1, uint16_t *w, uint16_t *h);
 void gfx_print(const char *str);
 void gfx_println(const char *str);
+void gfx_draw_text(int16_t x, int16_t y, const char *str, uint16_t color);
 void gfx_write_char(char c);
 int16_t gfx_draw_char(int16_t x, int16_t y, unsigned char c, uint16_t color, uint16_t bg, uint8_t size);
 

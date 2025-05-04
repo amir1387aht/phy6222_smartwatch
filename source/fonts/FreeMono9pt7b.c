@@ -175,5 +175,5 @@ const GFXglyph FreeMono9pt7bGlyphs[] = {
 const GFXfont FreeMono9pt7b = {
     FreeMono9pt7bBitmaps,
     FreeMono9pt7bGlyphs,
-    0x20, 0x7E, 18
+    0x20, 0x7E, 11
 };

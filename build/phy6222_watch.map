@@ -221,6 +221,8 @@ Discarded input sections
                 0x00000000       0xe4 ./build/source/display/gfx.o
  .text.gfx_draw_rect
                 0x00000000       0x44 ./build/source/display/gfx.o
+ .text.gfx_draw_text
+                0x00000000       0x44 ./build/source/display/gfx.o
  .text.gfx_draw_scaled_bitmap
                 0x00000000       0xb4 ./build/source/display/gfx.o
  .text.gfx_draw_circle_helper
@@ -254,7 +256,7 @@ Discarded input sections
  .text.gfx_println
                 0x00000000       0x3c ./build/source/display/gfx.o
  .text.gfx_clear
-                0x00000000       0x1c ./build/source/display/gfx.o
+                0x00000000       0x12 ./build/source/display/gfx.o
  .text.gfx_draw_dashed_line
                 0x00000000       0xe2 ./build/source/display/gfx.o
  .text.gfx_draw_arc
@@ -411,6 +413,115 @@ Discarded input sections
  .debug_macro   0x00000000       0xac ./build/source/fonts/FreeMono9pt7b.o
  .debug_macro   0x00000000       0x10 ./build/source/fonts/FreeMono9pt7b.o
  .debug_macro   0x00000000       0x34 ./build/source/fonts/FreeMono9pt7b.o
+ .group         0x00000000        0xc ./build/source/fonts/FreeSans12pt7b.o
+ .group         0x00000000        0xc ./build/source/fonts/FreeSans12pt7b.o
+ .group         0x00000000        0xc ./build/source/fonts/FreeSans12pt7b.o
+ .group         0x00000000        0xc ./build/source/fonts/FreeSans12pt7b.o
+ .group         0x00000000        0xc ./build/source/fonts/FreeSans12pt7b.o
+ .group         0x00000000        0xc ./build/source/fonts/FreeSans12pt7b.o
+ .group         0x00000000        0xc ./build/source/fonts/FreeSans12pt7b.o
+ .group         0x00000000        0xc ./build/source/fonts/FreeSans12pt7b.o
+ .group         0x00000000        0xc ./build/source/fonts/FreeSans12pt7b.o
+ .group         0x00000000        0xc ./build/source/fonts/FreeSans12pt7b.o
+ .group         0x00000000        0xc ./build/source/fonts/FreeSans12pt7b.o
+ .group         0x00000000        0xc ./build/source/fonts/FreeSans12pt7b.o
+ .group         0x00000000        0xc ./build/source/fonts/FreeSans12pt7b.o
+ .group         0x00000000        0xc ./build/source/fonts/FreeSans12pt7b.o
+ .group         0x00000000        0xc ./build/source/fonts/FreeSans12pt7b.o
+ .group         0x00000000        0xc ./build/source/fonts/FreeSans12pt7b.o
+ .group         0x00000000        0xc ./build/source/fonts/FreeSans12pt7b.o
+ .group         0x00000000        0xc ./build/source/fonts/FreeSans12pt7b.o
+ .group         0x00000000        0xc ./build/source/fonts/FreeSans12pt7b.o
+ .group         0x00000000        0xc ./build/source/fonts/FreeSans12pt7b.o
+ .group         0x00000000        0xc ./build/source/fonts/FreeSans12pt7b.o
+ .group         0x00000000        0xc ./build/source/fonts/FreeSans12pt7b.o
+ .group         0x00000000        0xc ./build/source/fonts/FreeSans12pt7b.o
+ .group         0x00000000        0xc ./build/source/fonts/FreeSans12pt7b.o
+ .group         0x00000000        0xc ./build/source/fonts/FreeSans12pt7b.o
+ .group         0x00000000        0xc ./build/source/fonts/FreeSans12pt7b.o
+ .group         0x00000000        0xc ./build/source/fonts/FreeSans12pt7b.o
+ .group         0x00000000        0xc ./build/source/fonts/FreeSans12pt7b.o
+ .group         0x00000000        0xc ./build/source/fonts/FreeSans12pt7b.o
+ .group         0x00000000        0xc ./build/source/fonts/FreeSans12pt7b.o
+ .group         0x00000000        0xc ./build/source/fonts/FreeSans12pt7b.o
+ .group         0x00000000        0xc ./build/source/fonts/FreeSans12pt7b.o
+ .group         0x00000000        0xc ./build/source/fonts/FreeSans12pt7b.o
+ .group         0x00000000        0xc ./build/source/fonts/FreeSans12pt7b.o
+ .group         0x00000000        0xc ./build/source/fonts/FreeSans12pt7b.o
+ .group         0x00000000        0xc ./build/source/fonts/FreeSans12pt7b.o
+ .group         0x00000000        0xc ./build/source/fonts/FreeSans12pt7b.o
+ .group         0x00000000        0xc ./build/source/fonts/FreeSans12pt7b.o
+ .group         0x00000000        0xc ./build/source/fonts/FreeSans12pt7b.o
+ .group         0x00000000        0xc ./build/source/fonts/FreeSans12pt7b.o
+ .group         0x00000000        0xc ./build/source/fonts/FreeSans12pt7b.o
+ .group         0x00000000        0xc ./build/source/fonts/FreeSans12pt7b.o
+ .group         0x00000000        0xc ./build/source/fonts/FreeSans12pt7b.o
+ .group         0x00000000        0xc ./build/source/fonts/FreeSans12pt7b.o
+ .group         0x00000000        0xc ./build/source/fonts/FreeSans12pt7b.o
+ .text          0x00000000        0x0 ./build/source/fonts/FreeSans12pt7b.o
+ .data          0x00000000        0x0 ./build/source/fonts/FreeSans12pt7b.o
+ .bss           0x00000000        0x0 ./build/source/fonts/FreeSans12pt7b.o
+ .rodata.FreeSans12pt7b
+                0x00000000        0xc ./build/source/fonts/FreeSans12pt7b.o
+ .rodata.FreeSans12pt7bGlyphs
+                0x00000000      0x2f8 ./build/source/fonts/FreeSans12pt7b.o
+ .rodata.FreeSans12pt7bBitmaps
+                0x00000000      0x7b1 ./build/source/fonts/FreeSans12pt7b.o
+ .debug_info    0x00000000      0x22f ./build/source/fonts/FreeSans12pt7b.o
+ .debug_abbrev  0x00000000       0xc0 ./build/source/fonts/FreeSans12pt7b.o
+ .debug_aranges
+                0x00000000       0x18 ./build/source/fonts/FreeSans12pt7b.o
+ .debug_macro   0x00000000      0x271 ./build/source/fonts/FreeSans12pt7b.o
+ .debug_macro   0x00000000      0xb2c ./build/source/fonts/FreeSans12pt7b.o
+ .debug_macro   0x00000000       0x22 ./build/source/fonts/FreeSans12pt7b.o
+ .debug_macro   0x00000000       0x8e ./build/source/fonts/FreeSans12pt7b.o
+ .debug_macro   0x00000000       0x51 ./build/source/fonts/FreeSans12pt7b.o
+ .debug_macro   0x00000000      0x103 ./build/source/fonts/FreeSans12pt7b.o
+ .debug_macro   0x00000000       0x6a ./build/source/fonts/FreeSans12pt7b.o
+ .debug_macro   0x00000000      0x1df ./build/source/fonts/FreeSans12pt7b.o
+ .debug_macro   0x00000000       0x22 ./build/source/fonts/FreeSans12pt7b.o
+ .debug_macro   0x00000000       0xd3 ./build/source/fonts/FreeSans12pt7b.o
+ .debug_macro   0x00000000       0x94 ./build/source/fonts/FreeSans12pt7b.o
+ .debug_macro   0x00000000       0x10 ./build/source/fonts/FreeSans12pt7b.o
+ .debug_macro   0x00000000       0x3a ./build/source/fonts/FreeSans12pt7b.o
+ .debug_macro   0x00000000       0x1f ./build/source/fonts/FreeSans12pt7b.o
+ .debug_macro   0x00000000      0x242 ./build/source/fonts/FreeSans12pt7b.o
+ .debug_macro   0x00000000       0x34 ./build/source/fonts/FreeSans12pt7b.o
+ .debug_macro   0x00000000      0x354 ./build/source/fonts/FreeSans12pt7b.o
+ .debug_macro   0x00000000      0x148 ./build/source/fonts/FreeSans12pt7b.o
+ .debug_macro   0x00000000       0x65 ./build/source/fonts/FreeSans12pt7b.o
+ .debug_macro   0x00000000       0xe2 ./build/source/fonts/FreeSans12pt7b.o
+ .debug_macro   0x00000000       0x34 ./build/source/fonts/FreeSans12pt7b.o
+ .debug_macro   0x00000000       0x22 ./build/source/fonts/FreeSans12pt7b.o
+ .debug_macro   0x00000000       0x3a ./build/source/fonts/FreeSans12pt7b.o
+ .debug_macro   0x00000000      0x112 ./build/source/fonts/FreeSans12pt7b.o
+ .debug_macro   0x00000000       0x24 ./build/source/fonts/FreeSans12pt7b.o
+ .debug_macro   0x00000000       0x7b ./build/source/fonts/FreeSans12pt7b.o
+ .debug_macro   0x00000000       0x3c ./build/source/fonts/FreeSans12pt7b.o
+ .debug_macro   0x00000000       0x34 ./build/source/fonts/FreeSans12pt7b.o
+ .debug_macro   0x00000000       0x16 ./build/source/fonts/FreeSans12pt7b.o
+ .debug_macro   0x00000000      0x11c ./build/source/fonts/FreeSans12pt7b.o
+ .debug_macro   0x00000000       0x94 ./build/source/fonts/FreeSans12pt7b.o
+ .debug_macro   0x00000000      0x38c ./build/source/fonts/FreeSans12pt7b.o
+ .debug_macro   0x00000000       0x16 ./build/source/fonts/FreeSans12pt7b.o
+ .debug_macro   0x00000000       0x4a ./build/source/fonts/FreeSans12pt7b.o
+ .debug_macro   0x00000000       0x34 ./build/source/fonts/FreeSans12pt7b.o
+ .debug_macro   0x00000000       0x10 ./build/source/fonts/FreeSans12pt7b.o
+ .debug_macro   0x00000000       0x58 ./build/source/fonts/FreeSans12pt7b.o
+ .debug_macro   0x00000000      0x1e5 ./build/source/fonts/FreeSans12pt7b.o
+ .debug_macro   0x00000000       0x16 ./build/source/fonts/FreeSans12pt7b.o
+ .debug_macro   0x00000000       0x29 ./build/source/fonts/FreeSans12pt7b.o
+ .debug_macro   0x00000000      0x19b ./build/source/fonts/FreeSans12pt7b.o
+ .debug_macro   0x00000000       0x16 ./build/source/fonts/FreeSans12pt7b.o
+ .debug_macro   0x00000000       0x3c ./build/source/fonts/FreeSans12pt7b.o
+ .debug_macro   0x00000000       0xac ./build/source/fonts/FreeSans12pt7b.o
+ .debug_macro   0x00000000       0x10 ./build/source/fonts/FreeSans12pt7b.o
+ .debug_macro   0x00000000       0x34 ./build/source/fonts/FreeSans12pt7b.o
+ .debug_line    0x00000000      0x509 ./build/source/fonts/FreeSans12pt7b.o
+ .debug_str     0x00000000     0xb7d0 ./build/source/fonts/FreeSans12pt7b.o
+ .comment       0x00000000       0x46 ./build/source/fonts/FreeSans12pt7b.o
+ .ARM.attributes
+                0x00000000       0x2c ./build/source/fonts/FreeSans12pt7b.o
  .group         0x00000000        0xc ./build/source/main.o
  .group         0x00000000        0xc ./build/source/main.o
  .group         0x00000000        0xc ./build/source/main.o
@@ -6432,7 +6543,7 @@ Linker script and memory map
                 0x1fffc220                g_irqstack_top
                 0x20000000                        g_stack = (ORIGIN (sram) + LENGTH (sram))
 
-.xip            0x11010100     0x2b00
+.xip            0x11010100     0x2b18
                 0x11010100                        _stext = ABSOLUTE (.)
  *.o(_func_xip_code_)
  *.o(_section_xip_code_)
@@ -6502,265 +6613,266 @@ Linker script and memory map
                 0x11010a7c        0xc ./build/source/display/gfx.o
                 0x11010a7c                gfx_set_text_wrap
  .text.gfx_set_cursor
-                0x11010a88       0x14 ./build/source/display/gfx.o
+                0x11010a88       0x28 ./build/source/display/gfx.o
                 0x11010a88                gfx_set_cursor
  .text.gfx_init
-                0x11010a9c       0x18 ./build/source/display/gfx.o
-                0x11010a9c                gfx_init
+                0x11010ab0       0x18 ./build/source/display/gfx.o
+                0x11010ab0                gfx_init
  .text.gfx_draw_pixel
-                0x11010ab4       0x2c ./build/source/display/gfx.o
-                0x11010ab4                gfx_draw_pixel
+                0x11010ac8       0x2c ./build/source/display/gfx.o
+                0x11010ac8                gfx_draw_pixel
  .text.gfx_draw_fast_v_line
-                0x11010ae0       0x98 ./build/source/display/gfx.o
-                0x11010ae0                gfx_draw_fast_v_line
+                0x11010af4       0x98 ./build/source/display/gfx.o
+                0x11010af4                gfx_draw_fast_v_line
  .text.gfx_draw_fast_h_line
-                0x11010b78       0x98 ./build/source/display/gfx.o
-                0x11010b78                gfx_draw_fast_h_line
+                0x11010b8c       0x98 ./build/source/display/gfx.o
+                0x11010b8c                gfx_draw_fast_h_line
  .text.gfx_fill_rect
-                0x11010c10       0xcc ./build/source/display/gfx.o
-                0x11010c10                gfx_fill_rect
+                0x11010c24       0xcc ./build/source/display/gfx.o
+                0x11010c24                gfx_fill_rect
  .text.gfx_draw_char
-                0x11010cdc      0x144 ./build/source/display/gfx.o
-                0x11010cdc                gfx_draw_char
+                0x11010cf0      0x144 ./build/source/display/gfx.o
+                0x11010cf0                gfx_draw_char
  .text.gfx_write_char
-                0x11010e20       0x9c ./build/source/display/gfx.o
-                0x11010e20                gfx_write_char
+                0x11010e34       0x9c ./build/source/display/gfx.o
+                0x11010e34                gfx_write_char
  .text.gfx_print
-                0x11010ebc       0x14 ./build/source/display/gfx.o
-                0x11010ebc                gfx_print
+                0x11010ed0       0x14 ./build/source/display/gfx.o
+                0x11010ed0                gfx_print
  .text.gfx_fill_circle_helper
-                0x11010ed0      0x114 ./build/source/display/gfx.o
-                0x11010ed0                gfx_fill_circle_helper
+                0x11010ee4      0x114 ./build/source/display/gfx.o
+                0x11010ee4                gfx_fill_circle_helper
  .text.gfx_fill_circle
-                0x11010fe4       0x2e ./build/source/display/gfx.o
-                0x11010fe4                gfx_fill_circle
- *fill*         0x11011012        0x2 
+                0x11010ff8       0x2e ./build/source/display/gfx.o
+                0x11010ff8                gfx_fill_circle
+ *fill*         0x11011026        0x2 
  .text.startup.main
-                0x11011014      0x14c ./build/source/main.o
-                0x11011014                main
+                0x11011028      0x14c ./build/source/main.o
+                0x11011028                main
  .text.app_osal_init
-                0x11011160        0xe ./build/source/osal/osal_init.o
-                0x11011160                app_osal_init
- *fill*         0x1101116e        0x2 
+                0x11011174        0xe ./build/source/osal/osal_init.o
+                0x11011174                app_osal_init
+ *fill*         0x11011182        0x2 
  .text.osalInitTasks
-                0x11011170       0x30 ./build/source/osal/osal_tasks.o
-                0x11011170                osalInitTasks
+                0x11011184       0x30 ./build/source/osal/osal_tasks.o
+                0x11011184                osalInitTasks
  .text.device_init
-                0x110111a0       0x20 ./build/source/utils/utils.o
-                0x110111a0                device_init
+                0x110111b4       0x20 ./build/source/utils/utils.o
+                0x110111b4                device_init
  .text.hal_gpioin_event_pin
-                0x110111c0       0x2c ./build/./sdk/components/driver/gpio/gpio.o
+                0x110111d4       0x2c ./build/./sdk/components/driver/gpio/gpio.o
  .text.hal_gpio_interrupt_enable.isra.0
-                0x110111ec       0x30 ./build/./sdk/components/driver/gpio/gpio.o
+                0x11011200       0x30 ./build/./sdk/components/driver/gpio/gpio.o
  .text.hal_GPIO_IRQHandler
-                0x1101121c       0x64 ./build/./sdk/components/driver/gpio/gpio.o
-                0x1101121c                hal_GPIO_IRQHandler
+                0x11011230       0x64 ./build/./sdk/components/driver/gpio/gpio.o
+                0x11011230                hal_GPIO_IRQHandler
  .text.hal_gpio_read
-                0x11011280       0x20 ./build/./sdk/components/driver/gpio/gpio.o
-                0x11011280                hal_gpio_read
+                0x11011294       0x20 ./build/./sdk/components/driver/gpio/gpio.o
+                0x11011294                hal_gpio_read
  .text.hal_gpio_fmux
-                0x110112a0       0x20 ./build/./sdk/components/driver/gpio/gpio.o
-                0x110112a0                hal_gpio_fmux
+                0x110112b4       0x20 ./build/./sdk/components/driver/gpio/gpio.o
+                0x110112b4                hal_gpio_fmux
  .text.hal_gpio_pull_set
-                0x110112c0       0x50 ./build/./sdk/components/driver/gpio/gpio.o
-                0x110112c0                hal_gpio_pull_set
+                0x110112d4       0x50 ./build/./sdk/components/driver/gpio/gpio.o
+                0x110112d4                hal_gpio_pull_set
  .text.hal_gpio_cfg_analog_io
-                0x11011310       0x34 ./build/./sdk/components/driver/gpio/gpio.o
-                0x11011310                hal_gpio_cfg_analog_io
+                0x11011324       0x34 ./build/./sdk/components/driver/gpio/gpio.o
+                0x11011324                hal_gpio_cfg_analog_io
  .text.hal_gpio_wakeup_set
-                0x11011344       0xa4 ./build/./sdk/components/driver/gpio/gpio.o
-                0x11011344                hal_gpio_wakeup_set
+                0x11011358       0xa4 ./build/./sdk/components/driver/gpio/gpio.o
+                0x11011358                hal_gpio_wakeup_set
  .text.hal_gpio_sleep_handler
-                0x110113e8       0x84 ./build/./sdk/components/driver/gpio/gpio.o
+                0x110113fc       0x84 ./build/./sdk/components/driver/gpio/gpio.o
  .text.hal_gpio_pin2pin3_control
-                0x1101146c       0x20 ./build/./sdk/components/driver/gpio/gpio.o
-                0x1101146c                hal_gpio_pin2pin3_control
+                0x11011480       0x20 ./build/./sdk/components/driver/gpio/gpio.o
+                0x11011480                hal_gpio_pin2pin3_control
  .text.hal_gpio_pin_init
-                0x1101148c       0x5c ./build/./sdk/components/driver/gpio/gpio.o
-                0x1101148c                hal_gpio_pin_init
+                0x110114a0       0x5c ./build/./sdk/components/driver/gpio/gpio.o
+                0x110114a0                hal_gpio_pin_init
  .text.hal_gpio_write
-                0x110114e8       0x28 ./build/./sdk/components/driver/gpio/gpio.o
-                0x110114e8                hal_gpio_write
+                0x110114fc       0x28 ./build/./sdk/components/driver/gpio/gpio.o
+                0x110114fc                hal_gpio_write
  .text.hal_gpioin_disable
-                0x11011510       0x44 ./build/./sdk/components/driver/gpio/gpio.o
-                0x11011510                hal_gpioin_disable
+                0x11011524       0x44 ./build/./sdk/components/driver/gpio/gpio.o
+                0x11011524                hal_gpioin_disable
  .text.hal_gpio_fmux_set
-                0x11011554       0x38 ./build/./sdk/components/driver/gpio/gpio.o
-                0x11011554                hal_gpio_fmux_set
+                0x11011568       0x38 ./build/./sdk/components/driver/gpio/gpio.o
+                0x11011568                hal_gpio_fmux_set
  .text.hal_gpioin_enable
-                0x1101158c       0x5c ./build/./sdk/components/driver/gpio/gpio.o
-                0x1101158c                hal_gpioin_enable
+                0x110115a0       0x5c ./build/./sdk/components/driver/gpio/gpio.o
+                0x110115a0                hal_gpioin_enable
  .text.hal_gpio_wakeup_handler
-                0x110115e8       0xc8 ./build/./sdk/components/driver/gpio/gpio.o
+                0x110115fc       0xc8 ./build/./sdk/components/driver/gpio/gpio.o
  .text.hal_gpioretention_register
-                0x110116b0       0x24 ./build/./sdk/components/driver/gpio/gpio.o
-                0x110116b0                hal_gpioretention_register
+                0x110116c4       0x24 ./build/./sdk/components/driver/gpio/gpio.o
+                0x110116c4                hal_gpioretention_register
  .text.hal_gpioin_register
-                0x110116d4       0x44 ./build/./sdk/components/driver/gpio/gpio.o
-                0x110116d4                hal_gpioin_register
+                0x110116e8       0x44 ./build/./sdk/components/driver/gpio/gpio.o
+                0x110116e8                hal_gpioin_register
  .text.hal_gpio_init
-                0x11011718       0x68 ./build/./sdk/components/driver/gpio/gpio.o
-                0x11011718                hal_gpio_init
+                0x1101172c       0x68 ./build/./sdk/components/driver/gpio/gpio.o
+                0x1101172c                hal_gpio_init
  .text.spis_int_handle
-                0x11011780       0xf8 ./build/./sdk/components/driver/spi/spi.o
+                0x11011794       0xf8 ./build/./sdk/components/driver/spi/spi.o
  .text.spi_int_handle
-                0x11011878       0xcc ./build/./sdk/components/driver/spi/spi.o
+                0x1101188c       0xcc ./build/./sdk/components/driver/spi/spi.o
  .text.hal_spi_write_fifo
-                0x11011944       0x48 ./build/./sdk/components/driver/spi/spi.o
+                0x11011958       0x48 ./build/./sdk/components/driver/spi/spi.o
  .text.hal_SPI0_IRQHandler
-                0x1101198c       0x28 ./build/./sdk/components/driver/spi/spi.o
-                0x1101198c                hal_SPI0_IRQHandler
+                0x110119a0       0x28 ./build/./sdk/components/driver/spi/spi.o
+                0x110119a0                hal_SPI0_IRQHandler
  .text.hal_SPI1_IRQHandler
-                0x110119b4       0x30 ./build/./sdk/components/driver/spi/spi.o
-                0x110119b4                hal_SPI1_IRQHandler
+                0x110119c8       0x30 ./build/./sdk/components/driver/spi/spi.o
+                0x110119c8                hal_SPI1_IRQHandler
  .text.hal_spi_pin_init.isra.0
-                0x110119e4       0x50 ./build/./sdk/components/driver/spi/spi.o
+                0x110119f8       0x50 ./build/./sdk/components/driver/spi/spi.o
  .text.spi_int_disable.isra.0
-                0x11011a34       0x28 ./build/./sdk/components/driver/spi/spi.o
+                0x11011a48       0x28 ./build/./sdk/components/driver/spi/spi.o
  .text.spi_int_enable
-                0x11011a5c       0x94 ./build/./sdk/components/driver/spi/spi.o
-                0x11011a5c                spi_int_enable
+                0x11011a70       0x94 ./build/./sdk/components/driver/spi/spi.o
+                0x11011a70                spi_int_enable
  .text.hal_spi_tmod_set
-                0x11011af0       0x2c ./build/./sdk/components/driver/spi/spi.o
-                0x11011af0                hal_spi_tmod_set
+                0x11011b04       0x2c ./build/./sdk/components/driver/spi/spi.o
+                0x11011b04                hal_spi_tmod_set
  .text.hal_spi_dfs_set
-                0x11011b1c       0x38 ./build/./sdk/components/driver/spi/spi.o
-                0x11011b1c                hal_spi_dfs_set
+                0x11011b30       0x38 ./build/./sdk/components/driver/spi/spi.o
+                0x11011b30                hal_spi_dfs_set
  .text.hal_spi_transmit
-                0x11011b54      0x3d4 ./build/./sdk/components/driver/spi/spi.o
-                0x11011b54                hal_spi_transmit
+                0x11011b68      0x3d4 ./build/./sdk/components/driver/spi/spi.o
+                0x11011b68                hal_spi_transmit
  .text.hal_spi_send_byte
-                0x11011f28       0x7c ./build/./sdk/components/driver/spi/spi.o
-                0x11011f28                hal_spi_send_byte
+                0x11011f3c       0x7c ./build/./sdk/components/driver/spi/spi.o
+                0x11011f3c                hal_spi_send_byte
  .text.hal_spi_bus_init
-                0x11011fa4      0x140 ./build/./sdk/components/driver/spi/spi.o
-                0x11011fa4                hal_spi_bus_init
+                0x11011fb8      0x140 ./build/./sdk/components/driver/spi/spi.o
+                0x11011fb8                hal_spi_bus_init
  .text.uart_hw_deinit.isra.0
-                0x110120e4       0x7c ./build/./sdk/components/driver/uart/uart.o
+                0x110120f8       0x7c ./build/./sdk/components/driver/uart/uart.o
  .text.uart_hw_init.isra.0
-                0x11012160      0x150 ./build/./sdk/components/driver/uart/uart.o
+                0x11012174      0x150 ./build/./sdk/components/driver/uart/uart.o
  .text.uart_wakeup_process_0
-                0x110122b0        0xa ./build/./sdk/components/driver/uart/uart.o
+                0x110122c4        0xa ./build/./sdk/components/driver/uart/uart.o
  .text.uart_wakeup_process_1
-                0x110122ba        0xa ./build/./sdk/components/driver/uart/uart.o
+                0x110122ce        0xa ./build/./sdk/components/driver/uart/uart.o
  .text.hal_uart_init
-                0x110122c4       0x78 ./build/./sdk/components/driver/uart/uart.o
-                0x110122c4                hal_uart_init
+                0x110122d8       0x78 ./build/./sdk/components/driver/uart/uart.o
+                0x110122d8                hal_uart_init
  .text.hal_uart_send_buff
-                0x1101233c      0x154 ./build/./sdk/components/driver/uart/uart.o
-                0x1101233c                hal_uart_send_buff
+                0x11012350      0x154 ./build/./sdk/components/driver/uart/uart.o
+                0x11012350                hal_uart_send_buff
  .text._uart_putc
-                0x11012490        0xe ./build/./sdk/components/driver/log/my_printf.o
- *fill*         0x1101249e        0x2 
+                0x110124a4        0xe ./build/./sdk/components/driver/log/my_printf.o
+ *fill*         0x110124b2        0x2 
  .text.number.constprop.0
-                0x110124a0      0x198 ./build/./sdk/components/driver/log/my_printf.o
+                0x110124b4      0x198 ./build/./sdk/components/driver/log/my_printf.o
  .text.dbg_printf
-                0x11012638      0x2b4 ./build/./sdk/components/driver/log/my_printf.o
-                0x11012638                dbg_printf
+                0x1101264c      0x2b4 ./build/./sdk/components/driver/log/my_printf.o
+                0x1101264c                dbg_printf
  .text.dbg_printf_init
-                0x110128ec       0x28 ./build/./sdk/components/driver/log/my_printf.o
-                0x110128ec                dbg_printf_init
+                0x11012900       0x28 ./build/./sdk/components/driver/log/my_printf.o
+                0x11012900                dbg_printf_init
  .text._hard_fault
-                0x11012914       0x54 ./build/./sdk/misc/jump_table.o
-                0x11012914                _hard_fault
+                0x11012928       0x54 ./build/./sdk/misc/jump_table.o
+                0x11012928                _hard_fault
  .text.hard_fault
-                0x11012968        0xc ./build/./sdk/misc/jump_table.o
-                0x11012968                hard_fault
- .text.c_start  0x11012974       0x1c ./build/./sdk/misc/CMSIS/device/phyplus/phy6222_cstart.o
-                0x11012974                c_start
+                0x1101297c        0xc ./build/./sdk/misc/jump_table.o
+                0x1101297c                hard_fault
+ .text.c_start  0x11012988       0x1c ./build/./sdk/misc/CMSIS/device/phyplus/phy6222_cstart.o
+                0x11012988                c_start
+ *fill*         0x110129a4        0x4 
  .text.c_start.__stub
-                0x11012990      0x270 linker stubs
-                0x11012c00                        _etext = ABSOLUTE (.)
+                0x110129a8      0x270 linker stubs
+                0x11012c18                        _etext = ABSOLUTE (.)
 
-.rodata         0x11012c00      0x938
+.rodata         0x11012c18      0x938
  *(.rodata .rodata.*)
  .rodata.app_init.str1.1
-                0x11012c00      0x150 ./build/source/app/app.o
+                0x11012c18      0x150 ./build/source/app/app.o
                                   0xa (size before relaxing)
  .rodata.Rcmd3.0
-                0x11012d50       0x2b ./build/source/display/display.o
+                0x11012d68       0x2b ./build/source/display/display.o
  .rodata.Rcmd2green.2
-                0x11012d7b        0xd ./build/source/display/display.o
+                0x11012d93        0xd ./build/source/display/display.o
  .rodata.Rcmd1.3
-                0x11012d88       0x3b ./build/source/display/display.o
- *fill*         0x11012dc3        0x1 
- .rodata        0x11012dc4       0x14 ./build/source/display/display.o
+                0x11012da0       0x3b ./build/source/display/display.o
+ *fill*         0x11012ddb        0x1 
+ .rodata        0x11012ddc       0x14 ./build/source/display/display.o
  .rodata.FreeMono9pt7b
-                0x11012dd8        0xc ./build/source/fonts/FreeMono9pt7b.o
-                0x11012dd8                FreeMono9pt7b
+                0x11012df0        0xc ./build/source/fonts/FreeMono9pt7b.o
+                0x11012df0                FreeMono9pt7b
  .rodata.FreeMono9pt7bGlyphs
-                0x11012de4      0x2f8 ./build/source/fonts/FreeMono9pt7b.o
-                0x11012de4                FreeMono9pt7bGlyphs
+                0x11012dfc      0x2f8 ./build/source/fonts/FreeMono9pt7b.o
+                0x11012dfc                FreeMono9pt7bGlyphs
  .rodata.FreeMono9pt7bBitmaps
-                0x110130dc      0x34c ./build/source/fonts/FreeMono9pt7b.o
-                0x110130dc                FreeMono9pt7bBitmaps
- .rodata        0x11013428       0x42 ./build/source/main.o
+                0x110130f4      0x34c ./build/source/fonts/FreeMono9pt7b.o
+                0x110130f4                FreeMono9pt7bBitmaps
+ .rodata        0x11013440       0x42 ./build/source/main.o
  .rodata.tasksCnt
-                0x1101346a        0x1 ./build/source/osal/osal_tasks.o
-                0x1101346a                tasksCnt
- *fill*         0x1101346b        0x1 
+                0x11013482        0x1 ./build/source/osal/osal_tasks.o
+                0x11013482                tasksCnt
+ *fill*         0x11013483        0x1 
  .rodata.tasksArr
-                0x1101346c        0x8 ./build/source/osal/osal_tasks.o
-                0x1101346c                tasksArr
+                0x11013484        0x8 ./build/source/osal/osal_tasks.o
+                0x11013484                tasksArr
  .rodata.ll_generateTxBuffer1.str1.1
-                0x11013474       0x5e ./build/./sdk/lib/rf/patch.o
+                0x1101348c       0x5e ./build/./sdk/lib/rf/patch.o
  .rodata.retention_reg
-                0x11013474       0x2e ./build/./sdk/components/driver/gpio/gpio.o
-                0x11013474                retention_reg
+                0x1101348c       0x2e ./build/./sdk/components/driver/gpio/gpio.o
+                0x1101348c                retention_reg
  .rodata.c_gpio_pull
-                0x110134a2       0x45 ./build/./sdk/components/driver/gpio/gpio.o
-                0x110134a2                c_gpio_pull
+                0x110134ba       0x45 ./build/./sdk/components/driver/gpio/gpio.o
+                0x110134ba                c_gpio_pull
  .rodata.c_gpio_index
-                0x110134e7       0x17 ./build/./sdk/components/driver/gpio/gpio.o
-                0x110134e7                c_gpio_index
+                0x110134ff       0x17 ./build/./sdk/components/driver/gpio/gpio.o
+                0x110134ff                c_gpio_index
  .rodata.hal_spi_transmit.str1.1
-                0x110134fe       0x24 ./build/./sdk/components/driver/spi/spi.o
+                0x11013516       0x24 ./build/./sdk/components/driver/spi/spi.o
  .rodata.hal_spi_send_byte.str1.1
-                0x110134fe       0x21 ./build/./sdk/components/driver/spi/spi.o
+                0x11013516       0x21 ./build/./sdk/components/driver/spi/spi.o
  .rodata.hal_spi_bus_init.cst2
-                0x110134fe        0x2 ./build/./sdk/components/driver/spi/spi.o
+                0x11013516        0x2 ./build/./sdk/components/driver/spi/spi.o
  .rodata.__FUNCTION__.0
-                0x11013500       0x12 ./build/./sdk/components/driver/spi/spi.o
+                0x11013518       0x12 ./build/./sdk/components/driver/spi/spi.o
  .rodata.__FUNCTION__.2
-                0x11013512       0x15 ./build/./sdk/components/driver/spi/spi.o
+                0x1101352a       0x15 ./build/./sdk/components/driver/spi/spi.o
  .rodata.number.constprop.0.str1.1
-                0x11013527       0x4a ./build/./sdk/components/driver/log/my_printf.o
+                0x1101353f       0x4a ./build/./sdk/components/driver/log/my_printf.o
  .rodata.dbg_printf.str1.1
-                0x11013527        0x7 ./build/./sdk/components/driver/log/my_printf.o
- *fill*         0x11013527        0x1 
- .rodata        0x11013528       0x10 ./build/./sdk/components/driver/log/my_printf.o
+                0x1101353f        0x7 ./build/./sdk/components/driver/log/my_printf.o
+ *fill*         0x1101353f        0x1 
+ .rodata        0x11013540       0x10 ./build/./sdk/components/driver/log/my_printf.o
  .rodata._hard_fault.str1.1
-                0x11013538       0x52 ./build/./sdk/misc/jump_table.o
+                0x11013550       0x52 ./build/./sdk/misc/jump_table.o
  *(.fixup)
  *(.gnu.warning)
  *(.rodata .rodata.*)
  *(.gnu.linkonce.t.*)
  *(.glue_7)
- .glue_7        0x11013538        0x0 linker stubs
+ .glue_7        0x11013550        0x0 linker stubs
  *(.glue_7t)
- .glue_7t       0x11013538        0x0 linker stubs
+ .glue_7t       0x11013550        0x0 linker stubs
  *(.got)
  *(.gcc_except_table)
  *(.gnu.linkonce.r.*)
 
-.rel.dyn        0x11013538        0x0
- .rel.iplt      0x11013538        0x0 ./build/source/app/app.o
+.rel.dyn        0x11013550        0x0
+ .rel.iplt      0x11013550        0x0 ./build/source/app/app.o
 
-.init_section   0x11013538        0x0
-                0x11013538                        _sinit = ABSOLUTE (.)
+.init_section   0x11013550        0x0
+                0x11013550                        _sinit = ABSOLUTE (.)
  *(.init_array .init_array.*)
-                0x11013538                        _einit = ABSOLUTE (.)
+                0x11013550                        _einit = ABSOLUTE (.)
 
 .ARM.extab
  *(.ARM.extab*)
 
-.ARM.exidx      0x11013538        0x0
-                0x11013538                        __exidx_start = ABSOLUTE (.)
+.ARM.exidx      0x11013550        0x0
+                0x11013550                        __exidx_start = ABSOLUTE (.)
  *(.ARM.exidx*)
-                0x11013538                        __exidx_end = ABSOLUTE (.)
+                0x11013550                        __exidx_end = ABSOLUTE (.)
 
-._sjtblsstore   0x11013538        0x0
-                0x11013538                        _sjtblss = ABSOLUTE (.)
+._sjtblsstore   0x11013550        0x0
+                0x11013550                        _sjtblss = ABSOLUTE (.)
 
 .stab
  *(.stab)
@@ -6859,135 +6971,135 @@ Linker script and memory map
  .ARM.attributes
                 0x00000402       0x1e C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.3 rel1/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp\libgcc.a(_thumb1_case_shi.o)
 
-.debug_abbrev   0x00000000     0x464a
+.debug_abbrev   0x00000000     0x4628
  *(.debug_abbrev)
  .debug_abbrev  0x00000000      0x20d ./build/source/app/app.o
  .debug_abbrev  0x0000020d      0x32b ./build/source/display/display.o
- .debug_abbrev  0x00000538      0x3d6 ./build/source/display/gfx.o
- .debug_abbrev  0x0000090e       0xc0 ./build/source/fonts/FreeMono9pt7b.o
- .debug_abbrev  0x000009ce      0x32a ./build/source/main.o
- .debug_abbrev  0x00000cf8       0xb5 ./build/source/osal/osal_init.o
- .debug_abbrev  0x00000dad      0x189 ./build/source/osal/osal_tasks.o
- .debug_abbrev  0x00000f36      0x119 ./build/source/utils/utils.o
- .debug_abbrev  0x0000104f      0x7df ./build/./sdk/lib/rf/patch.o
- .debug_abbrev  0x0000182e      0x25a ./build/./sdk/lib/sec/phy_sec_ext.o
- .debug_abbrev  0x00001a88      0x5c0 ./build/./sdk/lib/ble_host/l2cap_util.o
- .debug_abbrev  0x00002048      0x4be ./build/./sdk/lib/ble_controller/rf_phy_driver.o
- .debug_abbrev  0x00002506      0x21b ./build/./sdk/components/driver/clock/clock.o
- .debug_abbrev  0x00002721      0x44a ./build/./sdk/components/driver/flash/flash.o
- .debug_abbrev  0x00002b6b      0x571 ./build/./sdk/components/driver/gpio/gpio.o
- .debug_abbrev  0x000030dc      0x584 ./build/./sdk/components/driver/spi/spi.o
- .debug_abbrev  0x00003660      0x4b7 ./build/./sdk/components/driver/pwrmgr/pwrmgr.o
- .debug_abbrev  0x00003b17      0x51c ./build/./sdk/components/driver/uart/uart.o
- .debug_abbrev  0x00004033      0x2d8 ./build/./sdk/components/driver/log/my_printf.o
- .debug_abbrev  0x0000430b      0x1b4 ./build/./sdk/misc/jump_table.o
- .debug_abbrev  0x000044bf       0xf4 ./build/./sdk/misc/CMSIS/device/phyplus/phy6222_cstart.o
- .debug_abbrev  0x000045b3       0x6f ./build/./sdk/misc/CMSIS/device/phyplus/phy6222_vectors.o
- .debug_abbrev  0x00004622       0x28 ./build/./sdk/misc/CMSIS/device/phyplus/phy6222_start.o
+ .debug_abbrev  0x00000538      0x3b4 ./build/source/display/gfx.o
+ .debug_abbrev  0x000008ec       0xc0 ./build/source/fonts/FreeMono9pt7b.o
+ .debug_abbrev  0x000009ac      0x32a ./build/source/main.o
+ .debug_abbrev  0x00000cd6       0xb5 ./build/source/osal/osal_init.o
+ .debug_abbrev  0x00000d8b      0x189 ./build/source/osal/osal_tasks.o
+ .debug_abbrev  0x00000f14      0x119 ./build/source/utils/utils.o
+ .debug_abbrev  0x0000102d      0x7df ./build/./sdk/lib/rf/patch.o
+ .debug_abbrev  0x0000180c      0x25a ./build/./sdk/lib/sec/phy_sec_ext.o
+ .debug_abbrev  0x00001a66      0x5c0 ./build/./sdk/lib/ble_host/l2cap_util.o
+ .debug_abbrev  0x00002026      0x4be ./build/./sdk/lib/ble_controller/rf_phy_driver.o
+ .debug_abbrev  0x000024e4      0x21b ./build/./sdk/components/driver/clock/clock.o
+ .debug_abbrev  0x000026ff      0x44a ./build/./sdk/components/driver/flash/flash.o
+ .debug_abbrev  0x00002b49      0x571 ./build/./sdk/components/driver/gpio/gpio.o
+ .debug_abbrev  0x000030ba      0x584 ./build/./sdk/components/driver/spi/spi.o
+ .debug_abbrev  0x0000363e      0x4b7 ./build/./sdk/components/driver/pwrmgr/pwrmgr.o
+ .debug_abbrev  0x00003af5      0x51c ./build/./sdk/components/driver/uart/uart.o
+ .debug_abbrev  0x00004011      0x2d8 ./build/./sdk/components/driver/log/my_printf.o
+ .debug_abbrev  0x000042e9      0x1b4 ./build/./sdk/misc/jump_table.o
+ .debug_abbrev  0x0000449d       0xf4 ./build/./sdk/misc/CMSIS/device/phyplus/phy6222_cstart.o
+ .debug_abbrev  0x00004591       0x6f ./build/./sdk/misc/CMSIS/device/phyplus/phy6222_vectors.o
+ .debug_abbrev  0x00004600       0x28 ./build/./sdk/misc/CMSIS/device/phyplus/phy6222_start.o
 
-.debug_info     0x00000000    0x1d3d7
+.debug_info     0x00000000    0x1d48a
  *(.debug_info)
  .debug_info    0x00000000      0x8be ./build/source/app/app.o
  .debug_info    0x000008be     0x1027 ./build/source/display/display.o
- .debug_info    0x000018e5     0x3306 ./build/source/display/gfx.o
- .debug_info    0x00004beb      0x22e ./build/source/fonts/FreeMono9pt7b.o
- .debug_info    0x00004e19      0x9e2 ./build/source/main.o
- .debug_info    0x000057fb       0xe9 ./build/source/osal/osal_init.o
- .debug_info    0x000058e4      0x29c ./build/source/osal/osal_tasks.o
- .debug_info    0x00005b80      0x3f2 ./build/source/utils/utils.o
- .debug_info    0x00005f72     0x7def ./build/./sdk/lib/rf/patch.o
- .debug_info    0x0000dd61      0x4bf ./build/./sdk/lib/sec/phy_sec_ext.o
- .debug_info    0x0000e220     0x309e ./build/./sdk/lib/ble_host/l2cap_util.o
- .debug_info    0x000112be     0x1f67 ./build/./sdk/lib/ble_controller/rf_phy_driver.o
- .debug_info    0x00013225      0x9ba ./build/./sdk/components/driver/clock/clock.o
- .debug_info    0x00013bdf     0x192d ./build/./sdk/components/driver/flash/flash.o
- .debug_info    0x0001550c     0x1c5f ./build/./sdk/components/driver/gpio/gpio.o
- .debug_info    0x0001716b     0x24c7 ./build/./sdk/components/driver/spi/spi.o
- .debug_info    0x00019632     0x1632 ./build/./sdk/components/driver/pwrmgr/pwrmgr.o
- .debug_info    0x0001ac64     0x17ba ./build/./sdk/components/driver/uart/uart.o
- .debug_info    0x0001c41e      0xae1 ./build/./sdk/components/driver/log/my_printf.o
- .debug_info    0x0001ceff      0x2ea ./build/./sdk/misc/jump_table.o
- .debug_info    0x0001d1e9      0x153 ./build/./sdk/misc/CMSIS/device/phyplus/phy6222_cstart.o
- .debug_info    0x0001d33c       0x6a ./build/./sdk/misc/CMSIS/device/phyplus/phy6222_vectors.o
- .debug_info    0x0001d3a6       0x31 ./build/./sdk/misc/CMSIS/device/phyplus/phy6222_start.o
+ .debug_info    0x000018e5     0x33b9 ./build/source/display/gfx.o
+ .debug_info    0x00004c9e      0x22e ./build/source/fonts/FreeMono9pt7b.o
+ .debug_info    0x00004ecc      0x9e2 ./build/source/main.o
+ .debug_info    0x000058ae       0xe9 ./build/source/osal/osal_init.o
+ .debug_info    0x00005997      0x29c ./build/source/osal/osal_tasks.o
+ .debug_info    0x00005c33      0x3f2 ./build/source/utils/utils.o
+ .debug_info    0x00006025     0x7def ./build/./sdk/lib/rf/patch.o
+ .debug_info    0x0000de14      0x4bf ./build/./sdk/lib/sec/phy_sec_ext.o
+ .debug_info    0x0000e2d3     0x309e ./build/./sdk/lib/ble_host/l2cap_util.o
+ .debug_info    0x00011371     0x1f67 ./build/./sdk/lib/ble_controller/rf_phy_driver.o
+ .debug_info    0x000132d8      0x9ba ./build/./sdk/components/driver/clock/clock.o
+ .debug_info    0x00013c92     0x192d ./build/./sdk/components/driver/flash/flash.o
+ .debug_info    0x000155bf     0x1c5f ./build/./sdk/components/driver/gpio/gpio.o
+ .debug_info    0x0001721e     0x24c7 ./build/./sdk/components/driver/spi/spi.o
+ .debug_info    0x000196e5     0x1632 ./build/./sdk/components/driver/pwrmgr/pwrmgr.o
+ .debug_info    0x0001ad17     0x17ba ./build/./sdk/components/driver/uart/uart.o
+ .debug_info    0x0001c4d1      0xae1 ./build/./sdk/components/driver/log/my_printf.o
+ .debug_info    0x0001cfb2      0x2ea ./build/./sdk/misc/jump_table.o
+ .debug_info    0x0001d29c      0x153 ./build/./sdk/misc/CMSIS/device/phyplus/phy6222_cstart.o
+ .debug_info    0x0001d3ef       0x6a ./build/./sdk/misc/CMSIS/device/phyplus/phy6222_vectors.o
+ .debug_info    0x0001d459       0x31 ./build/./sdk/misc/CMSIS/device/phyplus/phy6222_start.o
 
-.debug_line     0x00000000    0x16efb
+.debug_line     0x00000000    0x16f54
  *(.debug_line)
  .debug_line    0x00000000      0x891 ./build/source/app/app.o
  .debug_line    0x00000891      0x8bd ./build/source/display/display.o
- .debug_line    0x0000114e     0x2792 ./build/source/display/gfx.o
- .debug_line    0x000038e0      0x507 ./build/source/fonts/FreeMono9pt7b.o
- .debug_line    0x00003de7      0x81b ./build/source/main.o
- .debug_line    0x00004602      0x532 ./build/source/osal/osal_init.o
- .debug_line    0x00004b34      0x662 ./build/source/osal/osal_tasks.o
- .debug_line    0x00005196      0x498 ./build/source/utils/utils.o
- .debug_line    0x0000562e     0x5c04 ./build/./sdk/lib/rf/patch.o
- .debug_line    0x0000b232      0x69d ./build/./sdk/lib/sec/phy_sec_ext.o
- .debug_line    0x0000b8cf     0x1721 ./build/./sdk/lib/ble_host/l2cap_util.o
- .debug_line    0x0000cff0     0x2268 ./build/./sdk/lib/ble_controller/rf_phy_driver.o
- .debug_line    0x0000f258      0x979 ./build/./sdk/components/driver/clock/clock.o
- .debug_line    0x0000fbd1     0x1339 ./build/./sdk/components/driver/flash/flash.o
- .debug_line    0x00010f0a     0x108a ./build/./sdk/components/driver/gpio/gpio.o
- .debug_line    0x00011f94     0x1b32 ./build/./sdk/components/driver/spi/spi.o
- .debug_line    0x00013ac6     0x10f0 ./build/./sdk/components/driver/pwrmgr/pwrmgr.o
- .debug_line    0x00014bb6      0xeb8 ./build/./sdk/components/driver/uart/uart.o
- .debug_line    0x00015a6e      0xb12 ./build/./sdk/components/driver/log/my_printf.o
- .debug_line    0x00016580      0x5d4 ./build/./sdk/misc/jump_table.o
- .debug_line    0x00016b54      0x30b ./build/./sdk/misc/CMSIS/device/phyplus/phy6222_cstart.o
- .debug_line    0x00016e5f       0x50 ./build/./sdk/misc/CMSIS/device/phyplus/phy6222_vectors.o
- .debug_line    0x00016eaf       0x4c ./build/./sdk/misc/CMSIS/device/phyplus/phy6222_start.o
+ .debug_line    0x0000114e     0x27eb ./build/source/display/gfx.o
+ .debug_line    0x00003939      0x507 ./build/source/fonts/FreeMono9pt7b.o
+ .debug_line    0x00003e40      0x81b ./build/source/main.o
+ .debug_line    0x0000465b      0x532 ./build/source/osal/osal_init.o
+ .debug_line    0x00004b8d      0x662 ./build/source/osal/osal_tasks.o
+ .debug_line    0x000051ef      0x498 ./build/source/utils/utils.o
+ .debug_line    0x00005687     0x5c04 ./build/./sdk/lib/rf/patch.o
+ .debug_line    0x0000b28b      0x69d ./build/./sdk/lib/sec/phy_sec_ext.o
+ .debug_line    0x0000b928     0x1721 ./build/./sdk/lib/ble_host/l2cap_util.o
+ .debug_line    0x0000d049     0x2268 ./build/./sdk/lib/ble_controller/rf_phy_driver.o
+ .debug_line    0x0000f2b1      0x979 ./build/./sdk/components/driver/clock/clock.o
+ .debug_line    0x0000fc2a     0x1339 ./build/./sdk/components/driver/flash/flash.o
+ .debug_line    0x00010f63     0x108a ./build/./sdk/components/driver/gpio/gpio.o
+ .debug_line    0x00011fed     0x1b32 ./build/./sdk/components/driver/spi/spi.o
+ .debug_line    0x00013b1f     0x10f0 ./build/./sdk/components/driver/pwrmgr/pwrmgr.o
+ .debug_line    0x00014c0f      0xeb8 ./build/./sdk/components/driver/uart/uart.o
+ .debug_line    0x00015ac7      0xb12 ./build/./sdk/components/driver/log/my_printf.o
+ .debug_line    0x000165d9      0x5d4 ./build/./sdk/misc/jump_table.o
+ .debug_line    0x00016bad      0x30b ./build/./sdk/misc/CMSIS/device/phyplus/phy6222_cstart.o
+ .debug_line    0x00016eb8       0x50 ./build/./sdk/misc/CMSIS/device/phyplus/phy6222_vectors.o
+ .debug_line    0x00016f08       0x4c ./build/./sdk/misc/CMSIS/device/phyplus/phy6222_start.o
 
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_aranges  0x00000000      0xd00
+.debug_aranges  0x00000000      0xd08
  *(.debug_aranges)
  .debug_aranges
                 0x00000000       0x50 ./build/source/app/app.o
  .debug_aranges
                 0x00000050       0x78 ./build/source/display/display.o
  .debug_aranges
-                0x000000c8      0x1a0 ./build/source/display/gfx.o
+                0x000000c8      0x1a8 ./build/source/display/gfx.o
  .debug_aranges
-                0x00000268       0x18 ./build/source/fonts/FreeMono9pt7b.o
+                0x00000270       0x18 ./build/source/fonts/FreeMono9pt7b.o
  .debug_aranges
-                0x00000280       0x20 ./build/source/main.o
+                0x00000288       0x20 ./build/source/main.o
  .debug_aranges
-                0x000002a0       0x20 ./build/source/osal/osal_init.o
+                0x000002a8       0x20 ./build/source/osal/osal_init.o
  .debug_aranges
-                0x000002c0       0x20 ./build/source/osal/osal_tasks.o
+                0x000002c8       0x20 ./build/source/osal/osal_tasks.o
  .debug_aranges
-                0x000002e0       0x30 ./build/source/utils/utils.o
+                0x000002e8       0x30 ./build/source/utils/utils.o
  .debug_aranges
-                0x00000310      0x258 ./build/./sdk/lib/rf/patch.o
+                0x00000318      0x258 ./build/./sdk/lib/rf/patch.o
  .debug_aranges
-                0x00000568       0x48 ./build/./sdk/lib/sec/phy_sec_ext.o
+                0x00000570       0x48 ./build/./sdk/lib/sec/phy_sec_ext.o
  .debug_aranges
-                0x000005b0      0x138 ./build/./sdk/lib/ble_host/l2cap_util.o
+                0x000005b8      0x138 ./build/./sdk/lib/ble_host/l2cap_util.o
  .debug_aranges
-                0x000006e8      0x100 ./build/./sdk/lib/ble_controller/rf_phy_driver.o
+                0x000006f0      0x100 ./build/./sdk/lib/ble_controller/rf_phy_driver.o
  .debug_aranges
-                0x000007e8       0x88 ./build/./sdk/components/driver/clock/clock.o
+                0x000007f0       0x88 ./build/./sdk/components/driver/clock/clock.o
  .debug_aranges
-                0x00000870       0xb8 ./build/./sdk/components/driver/flash/flash.o
+                0x00000878       0xb8 ./build/./sdk/components/driver/flash/flash.o
  .debug_aranges
-                0x00000928       0xd8 ./build/./sdk/components/driver/gpio/gpio.o
+                0x00000930       0xd8 ./build/./sdk/components/driver/gpio/gpio.o
  .debug_aranges
-                0x00000a00      0x100 ./build/./sdk/components/driver/spi/spi.o
+                0x00000a08      0x100 ./build/./sdk/components/driver/spi/spi.o
  .debug_aranges
-                0x00000b00       0xb8 ./build/./sdk/components/driver/pwrmgr/pwrmgr.o
+                0x00000b08       0xb8 ./build/./sdk/components/driver/pwrmgr/pwrmgr.o
  .debug_aranges
-                0x00000bb8       0x88 ./build/./sdk/components/driver/uart/uart.o
+                0x00000bc0       0x88 ./build/./sdk/components/driver/uart/uart.o
  .debug_aranges
-                0x00000c40       0x40 ./build/./sdk/components/driver/log/my_printf.o
+                0x00000c48       0x40 ./build/./sdk/components/driver/log/my_printf.o
  .debug_aranges
-                0x00000c80       0x28 ./build/./sdk/misc/jump_table.o
+                0x00000c88       0x28 ./build/./sdk/misc/jump_table.o
  .debug_aranges
-                0x00000ca8       0x20 ./build/./sdk/misc/CMSIS/device/phyplus/phy6222_cstart.o
+                0x00000cb0       0x20 ./build/./sdk/misc/CMSIS/device/phyplus/phy6222_cstart.o
  .debug_aranges
-                0x00000cc8       0x18 ./build/./sdk/misc/CMSIS/device/phyplus/phy6222_vectors.o
+                0x00000cd0       0x18 ./build/./sdk/misc/CMSIS/device/phyplus/phy6222_vectors.o
  .debug_aranges
-                0x00000ce0       0x20 ./build/./sdk/misc/CMSIS/device/phyplus/phy6222_start.o
+                0x00000ce8       0x20 ./build/./sdk/misc/CMSIS/device/phyplus/phy6222_start.o
 LOAD ./sdk/misc/bb_rom_sym_m0.gcc
                 0x000000d5                        bx_to_application = 0xd5
                 0x000001f9                        P256_mul64 = 0x1f9
@@ -8016,6 +8128,7 @@ LOAD ./build/source/app/app.o
 LOAD ./build/source/display/display.o
 LOAD ./build/source/display/gfx.o
 LOAD ./build/source/fonts/FreeMono9pt7b.o
+LOAD ./build/source/fonts/FreeSans12pt7b.o
 LOAD ./build/source/main.o
 LOAD ./build/source/osal/osal_init.o
 LOAD ./build/source/osal/osal_tasks.o
@@ -8073,86 +8186,86 @@ OUTPUT(./build/phy6222_watch.elf elf32-littlearm)
 LOAD linker stubs
 
 .debug_loclists
-                0x00000000     0xbb52
+                0x00000000     0xbc01
  .debug_loclists
                 0x00000000       0x17 ./build/source/app/app.o
  .debug_loclists
                 0x00000017      0x4a4 ./build/source/display/display.o
  .debug_loclists
-                0x000004bb     0x2c28 ./build/source/display/gfx.o
+                0x000004bb     0x2cd7 ./build/source/display/gfx.o
  .debug_loclists
-                0x000030e3       0x9a ./build/source/main.o
+                0x00003192       0x9a ./build/source/main.o
  .debug_loclists
-                0x0000317d       0x2a ./build/source/osal/osal_tasks.o
+                0x0000322c       0x2a ./build/source/osal/osal_tasks.o
  .debug_loclists
-                0x000031a7       0x9a ./build/source/utils/utils.o
+                0x00003256       0x9a ./build/source/utils/utils.o
  .debug_loclists
-                0x00003241     0x334f ./build/./sdk/lib/rf/patch.o
+                0x000032f0     0x334f ./build/./sdk/lib/rf/patch.o
  .debug_loclists
-                0x00006590       0xc5 ./build/./sdk/lib/sec/phy_sec_ext.o
+                0x0000663f       0xc5 ./build/./sdk/lib/sec/phy_sec_ext.o
  .debug_loclists
-                0x00006655     0x123f ./build/./sdk/lib/ble_host/l2cap_util.o
+                0x00006704     0x123f ./build/./sdk/lib/ble_host/l2cap_util.o
  .debug_loclists
-                0x00007894      0xa50 ./build/./sdk/lib/ble_controller/rf_phy_driver.o
+                0x00007943      0xa50 ./build/./sdk/lib/ble_controller/rf_phy_driver.o
  .debug_loclists
-                0x000082e4      0x245 ./build/./sdk/components/driver/clock/clock.o
+                0x00008393      0x245 ./build/./sdk/components/driver/clock/clock.o
  .debug_loclists
-                0x00008529      0x549 ./build/./sdk/components/driver/flash/flash.o
+                0x000085d8      0x549 ./build/./sdk/components/driver/flash/flash.o
  .debug_loclists
-                0x00008a72      0xa24 ./build/./sdk/components/driver/gpio/gpio.o
+                0x00008b21      0xa24 ./build/./sdk/components/driver/gpio/gpio.o
  .debug_loclists
-                0x00009496     0x11ce ./build/./sdk/components/driver/spi/spi.o
+                0x00009545     0x11ce ./build/./sdk/components/driver/spi/spi.o
  .debug_loclists
-                0x0000a664      0x62e ./build/./sdk/components/driver/pwrmgr/pwrmgr.o
+                0x0000a713      0x62e ./build/./sdk/components/driver/pwrmgr/pwrmgr.o
  .debug_loclists
-                0x0000ac92      0x7a7 ./build/./sdk/components/driver/uart/uart.o
+                0x0000ad41      0x7a7 ./build/./sdk/components/driver/uart/uart.o
  .debug_loclists
-                0x0000b439      0x6e5 ./build/./sdk/components/driver/log/my_printf.o
+                0x0000b4e8      0x6e5 ./build/./sdk/components/driver/log/my_printf.o
  .debug_loclists
-                0x0000bb1e       0x34 ./build/./sdk/misc/jump_table.o
+                0x0000bbcd       0x34 ./build/./sdk/misc/jump_table.o
 
 .debug_rnglists
-                0x00000000     0x12c1
+                0x00000000     0x12c7
  .debug_rnglists
                 0x00000000       0x3a ./build/source/app/app.o
  .debug_rnglists
                 0x0000003a       0xb0 ./build/source/display/display.o
  .debug_rnglists
-                0x000000ea      0x2bd ./build/source/display/gfx.o
+                0x000000ea      0x2c3 ./build/source/display/gfx.o
  .debug_rnglists
-                0x000003a7       0x2c ./build/source/main.o
+                0x000003ad       0x2c ./build/source/main.o
  .debug_rnglists
-                0x000003d3       0x13 ./build/source/osal/osal_init.o
+                0x000003d9       0x13 ./build/source/osal/osal_init.o
  .debug_rnglists
-                0x000003e6       0x13 ./build/source/osal/osal_tasks.o
+                0x000003ec       0x13 ./build/source/osal/osal_tasks.o
  .debug_rnglists
-                0x000003f9       0x43 ./build/source/utils/utils.o
+                0x000003ff       0x43 ./build/source/utils/utils.o
  .debug_rnglists
-                0x0000043c      0x4f1 ./build/./sdk/lib/rf/patch.o
+                0x00000442      0x4f1 ./build/./sdk/lib/rf/patch.o
  .debug_rnglists
-                0x0000092d       0x4a ./build/./sdk/lib/sec/phy_sec_ext.o
+                0x00000933       0x4a ./build/./sdk/lib/sec/phy_sec_ext.o
  .debug_rnglists
-                0x00000977      0x16f ./build/./sdk/lib/ble_host/l2cap_util.o
+                0x0000097d      0x16f ./build/./sdk/lib/ble_host/l2cap_util.o
  .debug_rnglists
-                0x00000ae6       0xf0 ./build/./sdk/lib/ble_controller/rf_phy_driver.o
+                0x00000aec       0xf0 ./build/./sdk/lib/ble_controller/rf_phy_driver.o
  .debug_rnglists
-                0x00000bd6       0x61 ./build/./sdk/components/driver/clock/clock.o
+                0x00000bdc       0x61 ./build/./sdk/components/driver/clock/clock.o
  .debug_rnglists
-                0x00000c37      0x124 ./build/./sdk/components/driver/flash/flash.o
+                0x00000c3d      0x124 ./build/./sdk/components/driver/flash/flash.o
  .debug_rnglists
-                0x00000d5b      0x116 ./build/./sdk/components/driver/gpio/gpio.o
+                0x00000d61      0x116 ./build/./sdk/components/driver/gpio/gpio.o
  .debug_rnglists
-                0x00000e71      0x1a7 ./build/./sdk/components/driver/spi/spi.o
+                0x00000e77      0x1a7 ./build/./sdk/components/driver/spi/spi.o
  .debug_rnglists
-                0x00001018      0x14b ./build/./sdk/components/driver/pwrmgr/pwrmgr.o
+                0x0000101e      0x14b ./build/./sdk/components/driver/pwrmgr/pwrmgr.o
  .debug_rnglists
-                0x00001163       0xbc ./build/./sdk/components/driver/uart/uart.o
+                0x00001169       0xbc ./build/./sdk/components/driver/uart/uart.o
  .debug_rnglists
-                0x0000121f       0x76 ./build/./sdk/components/driver/log/my_printf.o
+                0x00001225       0x76 ./build/./sdk/components/driver/log/my_printf.o
  .debug_rnglists
-                0x00001295       0x19 ./build/./sdk/misc/jump_table.o
+                0x0000129b       0x19 ./build/./sdk/misc/jump_table.o
  .debug_rnglists
-                0x000012ae       0x13 ./build/./sdk/misc/CMSIS/device/phyplus/phy6222_cstart.o
+                0x000012b4       0x13 ./build/./sdk/misc/CMSIS/device/phyplus/phy6222_cstart.o
 
 .debug_macro    0x00000000     0x900e
  .debug_macro   0x00000000      0x2e7 ./build/source/app/app.o
@@ -8260,53 +8373,53 @@ LOAD linker stubs
  .debug_macro   0x00008ed5      0x122 ./build/./sdk/misc/CMSIS/device/phyplus/phy6222_cstart.o
  .debug_macro   0x00008ff7       0x17 ./build/./sdk/misc/CMSIS/device/phyplus/phy6222_vectors.o
 
-.debug_str      0x00000000    0x220ff
- .debug_str     0x00000000    0x220ff ./build/source/app/app.o
+.debug_str      0x00000000    0x22126
+ .debug_str     0x00000000    0x22126 ./build/source/app/app.o
                                0xbc4d (size before relaxing)
- .debug_str     0x000220ff     0x832d ./build/source/display/display.o
- .debug_str     0x000220ff     0xbd96 ./build/source/display/gfx.o
- .debug_str     0x000220ff     0xb7cb ./build/source/fonts/FreeMono9pt7b.o
- .debug_str     0x000220ff    0x17192 ./build/source/main.o
- .debug_str     0x000220ff    0x1137f ./build/source/osal/osal_init.o
- .debug_str     0x000220ff    0x10a27 ./build/source/osal/osal_tasks.o
- .debug_str     0x000220ff     0x7993 ./build/source/utils/utils.o
- .debug_str     0x000220ff    0x1ca0c ./build/./sdk/lib/rf/patch.o
- .debug_str     0x000220ff     0x88fe ./build/./sdk/lib/sec/phy_sec_ext.o
- .debug_str     0x000220ff    0x121e4 ./build/./sdk/lib/ble_host/l2cap_util.o
- .debug_str     0x000220ff    0x12e34 ./build/./sdk/lib/ble_controller/rf_phy_driver.o
- .debug_str     0x000220ff    0x13113 ./build/./sdk/components/driver/clock/clock.o
- .debug_str     0x000220ff     0xb9a4 ./build/./sdk/components/driver/flash/flash.o
- .debug_str     0x000220ff    0x1536e ./build/./sdk/components/driver/gpio/gpio.o
- .debug_str     0x000220ff    0x149fc ./build/./sdk/components/driver/spi/spi.o
- .debug_str     0x000220ff    0x15d8a ./build/./sdk/components/driver/pwrmgr/pwrmgr.o
- .debug_str     0x000220ff    0x14444 ./build/./sdk/components/driver/uart/uart.o
- .debug_str     0x000220ff     0xabab ./build/./sdk/components/driver/log/my_printf.o
- .debug_str     0x000220ff    0x12c6f ./build/./sdk/misc/jump_table.o
- .debug_str     0x000220ff     0x6e2b ./build/./sdk/misc/CMSIS/device/phyplus/phy6222_cstart.o
- .debug_str     0x000220ff     0x2fa4 ./build/./sdk/misc/CMSIS/device/phyplus/phy6222_vectors.o
- .debug_str     0x000220ff       0x79 ./build/./sdk/misc/CMSIS/device/phyplus/phy6222_start.o
+ .debug_str     0x00022126     0x832d ./build/source/display/display.o
+ .debug_str     0x00022126     0xbdbd ./build/source/display/gfx.o
+ .debug_str     0x00022126     0xb7cb ./build/source/fonts/FreeMono9pt7b.o
+ .debug_str     0x00022126    0x17192 ./build/source/main.o
+ .debug_str     0x00022126    0x1137f ./build/source/osal/osal_init.o
+ .debug_str     0x00022126    0x10a27 ./build/source/osal/osal_tasks.o
+ .debug_str     0x00022126     0x7993 ./build/source/utils/utils.o
+ .debug_str     0x00022126    0x1ca0c ./build/./sdk/lib/rf/patch.o
+ .debug_str     0x00022126     0x88fe ./build/./sdk/lib/sec/phy_sec_ext.o
+ .debug_str     0x00022126    0x121e4 ./build/./sdk/lib/ble_host/l2cap_util.o
+ .debug_str     0x00022126    0x12e34 ./build/./sdk/lib/ble_controller/rf_phy_driver.o
+ .debug_str     0x00022126    0x13113 ./build/./sdk/components/driver/clock/clock.o
+ .debug_str     0x00022126     0xb9a4 ./build/./sdk/components/driver/flash/flash.o
+ .debug_str     0x00022126    0x1536e ./build/./sdk/components/driver/gpio/gpio.o
+ .debug_str     0x00022126    0x149fc ./build/./sdk/components/driver/spi/spi.o
+ .debug_str     0x00022126    0x15d8a ./build/./sdk/components/driver/pwrmgr/pwrmgr.o
+ .debug_str     0x00022126    0x14444 ./build/./sdk/components/driver/uart/uart.o
+ .debug_str     0x00022126     0xabab ./build/./sdk/components/driver/log/my_printf.o
+ .debug_str     0x00022126    0x12c6f ./build/./sdk/misc/jump_table.o
+ .debug_str     0x00022126     0x6e2b ./build/./sdk/misc/CMSIS/device/phyplus/phy6222_cstart.o
+ .debug_str     0x00022126     0x2fa4 ./build/./sdk/misc/CMSIS/device/phyplus/phy6222_vectors.o
+ .debug_str     0x00022126       0x79 ./build/./sdk/misc/CMSIS/device/phyplus/phy6222_start.o
 
-.debug_frame    0x00000000     0x2544
+.debug_frame    0x00000000     0x2564
  .debug_frame   0x00000000       0xd0 ./build/source/app/app.o
  .debug_frame   0x000000d0      0x168 ./build/source/display/display.o
- .debug_frame   0x00000238      0x538 ./build/source/display/gfx.o
- .debug_frame   0x00000770       0x30 ./build/source/main.o
- .debug_frame   0x000007a0       0x20 ./build/source/osal/osal_init.o
- .debug_frame   0x000007c0       0x28 ./build/source/osal/osal_tasks.o
- .debug_frame   0x000007e8       0x60 ./build/source/utils/utils.o
- .debug_frame   0x00000848      0x7fc ./build/./sdk/lib/rf/patch.o
- .debug_frame   0x00001044       0x9c ./build/./sdk/lib/sec/phy_sec_ext.o
- .debug_frame   0x000010e0      0x388 ./build/./sdk/lib/ble_host/l2cap_util.o
- .debug_frame   0x00001468      0x35c ./build/./sdk/lib/ble_controller/rf_phy_driver.o
- .debug_frame   0x000017c4      0x118 ./build/./sdk/components/driver/clock/clock.o
- .debug_frame   0x000018dc      0x258 ./build/./sdk/components/driver/flash/flash.o
- .debug_frame   0x00001b34      0x264 ./build/./sdk/components/driver/gpio/gpio.o
- .debug_frame   0x00001d98      0x2fc ./build/./sdk/components/driver/spi/spi.o
- .debug_frame   0x00002094      0x20c ./build/./sdk/components/driver/pwrmgr/pwrmgr.o
- .debug_frame   0x000022a0      0x19c ./build/./sdk/components/driver/uart/uart.o
- .debug_frame   0x0000243c       0xa4 ./build/./sdk/components/driver/log/my_printf.o
- .debug_frame   0x000024e0       0x44 ./build/./sdk/misc/jump_table.o
- .debug_frame   0x00002524       0x20 ./build/./sdk/misc/CMSIS/device/phyplus/phy6222_cstart.o
+ .debug_frame   0x00000238      0x558 ./build/source/display/gfx.o
+ .debug_frame   0x00000790       0x30 ./build/source/main.o
+ .debug_frame   0x000007c0       0x20 ./build/source/osal/osal_init.o
+ .debug_frame   0x000007e0       0x28 ./build/source/osal/osal_tasks.o
+ .debug_frame   0x00000808       0x60 ./build/source/utils/utils.o
+ .debug_frame   0x00000868      0x7fc ./build/./sdk/lib/rf/patch.o
+ .debug_frame   0x00001064       0x9c ./build/./sdk/lib/sec/phy_sec_ext.o
+ .debug_frame   0x00001100      0x388 ./build/./sdk/lib/ble_host/l2cap_util.o
+ .debug_frame   0x00001488      0x35c ./build/./sdk/lib/ble_controller/rf_phy_driver.o
+ .debug_frame   0x000017e4      0x118 ./build/./sdk/components/driver/clock/clock.o
+ .debug_frame   0x000018fc      0x258 ./build/./sdk/components/driver/flash/flash.o
+ .debug_frame   0x00001b54      0x264 ./build/./sdk/components/driver/gpio/gpio.o
+ .debug_frame   0x00001db8      0x2fc ./build/./sdk/components/driver/spi/spi.o
+ .debug_frame   0x000020b4      0x20c ./build/./sdk/components/driver/pwrmgr/pwrmgr.o
+ .debug_frame   0x000022c0      0x19c ./build/./sdk/components/driver/uart/uart.o
+ .debug_frame   0x0000245c       0xa4 ./build/./sdk/components/driver/log/my_printf.o
+ .debug_frame   0x00002500       0x44 ./build/./sdk/misc/jump_table.o
+ .debug_frame   0x00002544       0x20 ./build/./sdk/misc/CMSIS/device/phyplus/phy6222_cstart.o
 
 .debug_line_str
                 0x00000000      0x12c

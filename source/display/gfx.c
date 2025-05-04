@@ -44,7 +44,8 @@ void gfx_set_text_wrap(bool w) {
 // Set cursor position
 void gfx_set_cursor(int16_t x, int16_t y) {
     _cursor_x = x;
-    _cursor_y = y;
+    _cursor_y = y + _font->yAdvance * _text_size;
+
 }
 
 // Draw a single character
@@ -186,6 +187,21 @@ void gfx_write_char(char c) {
             _cursor_x = 0;
         }
     }
+}
+
+void gfx_draw_text(int16_t x, int16_t y, const char *str, uint16_t color) {
+    uint16_t orig_color = _text_color;
+    int16_t orig_x = _cursor_x;
+    int16_t orig_y = _cursor_y;
+    
+    _text_color = color;
+    gfx_set_cursor(x, y);
+    gfx_print(str);
+    
+    // Restore original state
+    _text_color = orig_color;
+    _cursor_x = orig_x;
+    _cursor_y = orig_y;
 }
 
 // Print a string of text

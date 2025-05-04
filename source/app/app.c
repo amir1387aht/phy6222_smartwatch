@@ -154,7 +154,7 @@ void app_init() {
     gfx_set_text_color(TEXT_COLOR);
     gfx_set_text_size(1);
     gfx_set_text_wrap(true);
-    gfx_set_cursor(14, 10);
+    gfx_set_cursor(14, 0);
     gfx_print("PONG GAME");
     gfx_fill_rect(PLAYER_PADDLE_X, player_paddle_y, PADDLE_WIDTH, PADDLE_HEIGHT, PADDLE_COLOR);
     gfx_fill_rect(AI_PADDLE_X, ai_paddle_y, PADDLE_WIDTH, PADDLE_HEIGHT, PADDLE_COLOR);
