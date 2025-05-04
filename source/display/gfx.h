@@ -102,8 +102,4 @@ void gfx_draw_text(int16_t x, int16_t y, const char *str, uint16_t color);
 void gfx_write_char(char c);
 int16_t gfx_draw_char(int16_t x, int16_t y, unsigned char c, uint16_t color, uint16_t bg, uint8_t size);
 
-// Scrolling functions
-void gfx_scroll_up(uint16_t lines, uint16_t bg_color);
-void gfx_scroll_down(uint16_t lines, uint16_t bg_color);
-
 #endif // GFX_H
