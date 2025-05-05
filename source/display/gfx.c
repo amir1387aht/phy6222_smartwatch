@@ -837,59 +837,46 @@ void gfx_draw_dashed_line(int16_t x0, int16_t y0, int16_t x1, int16_t y1, uint16
     }
 }
 
-// Draw an arc
-void gfx_draw_arc(int16_t x0, int16_t y0, int16_t r, int16_t start_angle, int16_t end_angle, uint16_t color) {
-    // Ensure angles are in 0-360 range
-    start_angle = start_angle % 360;
-    if (start_angle < 0) start_angle += 360;
-    
-    end_angle = end_angle % 360;
-    if (end_angle < 0) end_angle += 360;
+#define SEGMENT_DEG 6.0f
 
-    // If start > end, swap them and add 360 to end
-    if (start_angle > end_angle) {
-        int16_t temp = start_angle;
-        start_angle = end_angle;
-        end_angle = temp + 360;
+void gfx_draw_arc(int16_t x0, int16_t y0, int16_t r, int16_t start_angle, int16_t end_angle, 
+                uint8_t thickness, uint16_t color)
+{
+    // Normalize angles
+    start_angle %= 360; if(start_angle < 0) start_angle += 360;
+    end_angle   %= 360; if(end_angle   < 0) end_angle   += 360;
+    if(end_angle < start_angle)       end_angle += 360;
+    if(end_angle - start_angle > 360) end_angle  = start_angle + 360;
+
+    // Compute segment count and radians
+    float spanDeg = end_angle - start_angle;
+    int   N       = (int)roundf(spanDeg / SEGMENT_DEG);
+    if(N < 1) N = 1;
+    double spanRad = spanDeg * (M_PI/180.0);
+    double a0      = start_angle * (M_PI/180.0);
+    int16_t rin    = r - (thickness - 1);
+    if(rin < 0) rin = 0;
+
+    // Preallocate point arrays on the stack (N is small, e.g. <=60)
+    int16_t xO[N+1], yO[N+1], xI[N+1], yI[N+1];
+
+    // Compute boundary points exactly
+    for(int i = 0; i <= N; i++) {
+        double ang = a0 + spanRad * i / N;
+        xO[i] = x0 + (int16_t)lround(r   * cos(ang));
+        yO[i] = y0 + (int16_t)lround(r   * sin(ang));
+        xI[i] = x0 + (int16_t)lround(rin * cos(ang));
+        yI[i] = y0 + (int16_t)lround(rin * sin(ang));
     }
 
-    float rad_per_degree = 0.0174532925; // PI/180
-    
-    for (int16_t i = start_angle; i <= end_angle; i++) {
-        int16_t angle = i % 360;
-        float rad_angle = angle * rad_per_degree;
-        int16_t x = x0 + (int16_t)(cos(rad_angle) * r);
-        int16_t y = y0 + (int16_t)(sin(rad_angle) * r);
-        
-        gfx_draw_pixel(x, y, color);
-    }
-}
-
-// Fill an arc
-void gfx_fill_arc(int16_t x0, int16_t y0, int16_t r, int16_t start_angle, int16_t end_angle, uint16_t color) {
-    // Ensure angles are in 0-360 range
-    start_angle = start_angle % 360;
-    if (start_angle < 0) start_angle += 360;
-    
-    end_angle = end_angle % 360;
-    if (end_angle < 0) end_angle += 360;
-
-    // If start > end, swap them and add 360 to end
-    if (start_angle > end_angle) {
-        int16_t temp = start_angle;
-        start_angle = end_angle;
-        end_angle = temp + 360;
-    }
-
-    float rad_per_degree = 0.0174532925; // PI/180
-    
-    for (int16_t angle = start_angle; angle <= end_angle; angle++) {
-        int16_t a = angle % 360;
-        float rad_angle = a * rad_per_degree;
-        int16_t x = x0 + (int16_t)(cos(rad_angle) * r);
-        int16_t y = y0 + (int16_t)(sin(rad_angle) * r);
-        
-        gfx_draw_line(x0, y0, x, y, color);
+    // Fill each trapezoid with two triangles
+    for(int i = 0; i < N; i++) {
+        gfx_fill_triangle(xO[i],  yO[i],
+                        xO[i+1],yO[i+1],
+                        xI[i],  yI[i], color);
+        gfx_fill_triangle(xI[i],  yI[i],
+                        xO[i+1],yO[i+1],
+                        xI[i+1],yI[i+1], color);
     }
 }
 
