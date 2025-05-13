@@ -837,7 +837,7 @@ void gfx_draw_dashed_line(int16_t x0, int16_t y0, int16_t x1, int16_t y1, uint16
     }
 }
 
-#define SEGMENT_DEG 6.0f
+#define SEGMENT_DEG 2.0f
 
 void gfx_draw_arc(int16_t x0, int16_t y0, int16_t r, int16_t start_angle, int16_t end_angle, 
                 uint8_t thickness, uint16_t color)
